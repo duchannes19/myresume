@@ -1,7 +1,6 @@
 import React from "react";
 import Particles from "react-particles";
 import { loadLinksPreset } from "tsparticles-preset-links";
-import background from './background/wallpaper.jpg'
 
 class ParticlesContainer extends React.PureComponent {
   async customInit(engine) {
