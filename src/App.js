@@ -1,9 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Homepage from './components/home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    null
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Homepage />} />
+      </Routes>
+    </Router>
   );
 }
 

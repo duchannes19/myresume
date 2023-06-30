@@ -1,0 +1,25 @@
+/* CSS HEX */
+:root {
+    --onyx: #393F44ff;
+    --space-cadet: #15173Cff;
+    --dark-purple: #231622ff;
+    --old-gold: #CAB71Eff;
+    --turquoise: #2DDABAff;
+  }
+  
+
+body{
+    background: url('../background/wallpaper.jpg');
+}
+
+.navbar{
+    background-color: var(--space-cadet);
+}
+
+.navbar-logo{
+    width: 4rem;
+}
+
+.flag{
+    margin-right: 1rem;
+}
