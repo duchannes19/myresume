@@ -13,7 +13,7 @@ body{
 }
 
 .navbar{
-    background-color: var(--space-cadet);
+    background-color: rgba(21, 23, 60, 0.842);
 }
 
 .navbar-logo{
@@ -22,4 +22,13 @@ body{
 
 .flag{
     margin-right: 1rem;
+}
+
+.center-container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 15rem;
 }
