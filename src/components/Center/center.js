@@ -1,11 +1,13 @@
 import React from 'react'
-
+import About from './about';
 function Center({value}){
 
     return(
+        <div className='center'>
             <div className='center-container'> 
-                TEST
+                {value === 0 && <About />}
             </div>
+        </div>
     );
 
 };
