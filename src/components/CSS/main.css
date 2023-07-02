@@ -32,12 +32,13 @@ body {
 
 .navbar-logo {
     width: 4rem;
-    transition: all 0.3 ease;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .navbar-logo:hover{
     background-color: var(--old-gold) !important;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
 }
 
 .flag {
