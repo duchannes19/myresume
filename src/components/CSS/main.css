@@ -32,6 +32,12 @@ body {
 
 .navbar-logo {
     width: 4rem;
+    transition: all 0.3 ease;
+}
+
+.navbar-logo:hover{
+    background-color: var(--old-gold) !important;
+    transition: all 0.3 ease;
 }
 
 .flag {
@@ -44,12 +50,17 @@ body {
     align-items: center;
 }
 
+.main-logo img{
+    width: 15rem;
+    position: relative;
+}
+
 .center-container {
     display: flex;
     justify-content: center;
     width: 90%;
     margin: auto;
-    margin-top: 15rem;
+    margin-top: 12rem;
     min-height: 50vh;
     background-color: var(--dark-purple);
     position: relative;
@@ -63,6 +74,8 @@ body {
     filter: drop-shadow(0 0 0.4rem #2DDABA);
     margin-top: 1rem
 }
+
+
 
 @media only screen and (max-width: 768px) {
     
