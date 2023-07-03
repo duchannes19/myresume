@@ -21,9 +21,14 @@ const Resume = () => {
 
     return (
         <div className='info'>
-            <h4>My Resume</h4>
-            <p style={{ marginTop: '1rem' }}>You can have a look at my resume.</p>
+            <h3 className='center-title'>My Resume</h3>
 
+            <div className='languages'>
+            <h4><b>Languages</b></h4>
+            <p>I speak <b>English</b> and <b>Italian</b></p>
+            </div>
+
+            <h4 style={{ marginTop: '1rem' }}><b>Skills</b></h4>
             <div className='skills'>
                 <div className='skills_sub'>
                     <ProgressBar percentage={75} label='React' />

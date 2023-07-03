@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akatab&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
 
 :root {
     --onyx: #393F44ff;
@@ -54,6 +55,48 @@ body {
     margin-right: 1rem;
 }
 
+.languages {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.center-title {
+    margin-top: 3rem;
+}
+
+.project-button {
+    -webkit-box-shadow: 0px 5px 15px -3px #000000;
+    box-shadow: 0px 5px 15px -3px #000000;
+    backdrop-filter: blur(2px);
+}
+
+.projects-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-carousel {
+    width: 50%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 0.4rem #2DDABA);
+}
+
 .progress-bar {
     width: 100%;
     height: 20px;
@@ -75,7 +118,7 @@ body {
     width: 40rem;
     gap: 5rem;
     margin-bottom: 3rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .skills_sub {
@@ -120,6 +163,11 @@ body {
 
 @media only screen and (max-width: 768px) {
 
+    .info {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .skills {
         width: 18rem;
         gap: 2rem;
@@ -130,7 +178,7 @@ body {
         padding-bottom: 2rem;
     }
 
-    .navbar-logo.mobile{
+    .navbar-logo.mobile {
         display: block;
     }
 }

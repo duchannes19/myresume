@@ -5,7 +5,7 @@ function Language() {
 
     return (
         <>
-            <Flag country="US" />
+            <Flag country="GB" />
         </>
     );
 
