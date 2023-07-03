@@ -9,7 +9,7 @@ const About = () => {
         <p style={{margin: '1rem'}}>I am a <b>Computer Engineering</b> graduate and have a passion for creating and experimenting with programming languages.</p>
         <p>I want to put my knowledge and <b>skills</b> to contribute to the development of quality software.</p>
         <p>I am <b>motivated</b> to continuously learn and take on complex challenges.</p>
-        <img src={pc} alt='about' className='about-gif'/>
+        <img src={pc} alt='about' className='about-gif' loading="lazy"/>
         </>
     </div>);
 };

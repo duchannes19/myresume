@@ -11,7 +11,7 @@ function Portfolio() {
             {showProject === 0 && (
                 <>
                     <h3 className='center-title'>Portfolio</h3>
-                    <p>Here are some of my projects</p>
+                    <p>Here are some of my projects:</p>
                     <div className='projects-container'>
                         <div
                             className='project'

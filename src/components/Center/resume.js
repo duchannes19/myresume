@@ -25,7 +25,7 @@ const Resume = () => {
 
             <div className='languages'>
             <h4><b>Languages</b></h4>
-            <p>I speak <b>English</b> and <b>Italian</b></p>
+            <p>I speak <b>English</b> and <b>Italian</b>.</p>
             </div>
 
             <h4 style={{ marginTop: '1rem' }}><b>Skills</b></h4>
@@ -49,6 +49,12 @@ const Resume = () => {
                     <ProgressBar percentage={78} label='CSS' />
                     <ProgressBar percentage={55} label='Python' />
                 </div>
+            </div>
+
+
+            <div className='other'>
+            <h4><b>Other</b></h4>
+            <p>I also work my way around with <b>Photoshop</b>, <b>Audition</b>, <b>Premiere</b> and other tools.</p>
             </div>
 
             <Stack direction="row" spacing={2}>

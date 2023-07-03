@@ -46,7 +46,7 @@ const Navbar = ({ lan, setLan, setCenter }) => {
         <AppBar position="static">
             <Toolbar disableGutters className='navbar'>
                 <IconButton sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 1 }} >
-                    <img src={logo} alt='navbar-logo' className='navbar-logo' />
+                    <img src={logo} alt='navbar-logo' className='navbar-logo'loading="lazy"/>
                 </IconButton>
 
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -105,7 +105,7 @@ const Navbar = ({ lan, setLan, setCenter }) => {
                     ))}
                 </Box>
 
-                <img src={logo} alt='navbar-logo' className='navbar-logo mobile' />
+                <img src={logo} alt='navbar-logo' className='navbar-logo-mobile' loading="lazy"/>
 
                 <Box sx={{ flexGrow: 0 }}>
                     <Tooltip title="Change Language">
