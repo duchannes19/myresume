@@ -5,26 +5,27 @@
     --onyx: #393F44ff;
     --space-cadet: #15173Cff;
     --dark-purple: #231622ff;
+    --dark-purple-blur: rgba(35, 22, 34, 0.854);
     --old-gold: #CAB71Eff;
     --turquoise: #2DDABAff;
 }
 
 body {
     background: url('../background/wallpaper.jpg');
-    
+
 }
 
 .navbar {
     background-color: rgba(21, 23, 60, 0.842);
 }
 
-.navbar-buttons{
+.navbar-buttons {
     font-family: 'Roboto Mono', monospace !important;
     color: white;
     transition: all 0.3s ease;
 }
 
-.navbar-buttons:hover{
+.navbar-buttons:hover {
     color: var(--space-cadet);
     background-color: var(--old-gold) !important;
     transition: all 0.3s ease;
@@ -36,7 +37,15 @@ body {
     transition: all 0.3s ease;
 }
 
-.navbar-logo:hover{
+.navbar-logo.mobile {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: none;
+}
+
+.navbar-logo:hover {
     background-color: var(--old-gold) !important;
     transition: all 0.3s ease;
 }
@@ -45,15 +54,43 @@ body {
     margin-right: 1rem;
 }
 
-.info{
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    border: 1px solid var(--turquoise);
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--old-gold);
+    transition: width 0.3s ease-in-out;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    width: 40rem;
+    gap: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.skills_sub {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.info {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.main-logo img{
-    width: 15rem;
-    position: relative;
 }
 
 .center-container {
@@ -63,15 +100,18 @@ body {
     margin: auto;
     margin-top: 12rem;
     min-height: 50vh;
-    background-color: var(--dark-purple);
+    background-color: var(--dark-purple-blur);
+    backdrop-filter: blur(2px);
     position: relative;
     color: white;
     filter: drop-shadow(0 0 0.4rem #2DDABA);
     border-radius: 10px;
     font-family: 'Roboto Mono', monospace;
+    padding-bottom: 1rem;
+    margin-bottom: 5rem;
 }
 
-.about-gif{
+.about-gif {
     filter: drop-shadow(0 0 0.4rem #2DDABA);
     margin-top: 1rem
 }
@@ -79,14 +119,18 @@ body {
 
 
 @media only screen and (max-width: 768px) {
-    
-    .center-container{
+
+    .skills {
+        width: 18rem;
+        gap: 2rem;
+    }
+
+    .center-container {
         margin-top: 5rem;
-        margin-bottom: 5rem;
         padding-bottom: 2rem;
     }
 
-    .info{
-        text-align: center;
+    .navbar-logo.mobile{
+        display: block;
     }
 }

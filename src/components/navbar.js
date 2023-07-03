@@ -12,6 +12,7 @@ import './CSS/main.css'
 import logo from './images/logo.png'
 import Language from './language';
 import Flag from 'react-flagkit';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const pages = ['About', 'Resume', 'Portfolio', 'Contact'];
 const italian = { flag: <Flag country="IT" className='flag' />, name: 'Italian' }
@@ -57,7 +58,7 @@ const Navbar = ({ lan, setLan, setCenter }) => {
                         onClick={handleOpenNavMenu}
                         color="inherit"
                     >
-                        <img src={logo} alt='navbar-logo' className='navbar-logo' />
+                        <MenuIcon />
                     </IconButton>
                     <Menu
                         id="menu-appbar"
@@ -103,6 +104,8 @@ const Navbar = ({ lan, setLan, setCenter }) => {
                         </Button>
                     ))}
                 </Box>
+
+                <img src={logo} alt='navbar-logo' className='navbar-logo mobile' />
 
                 <Box sx={{ flexGrow: 0 }}>
                     <Tooltip title="Change Language">
