@@ -4,6 +4,7 @@ import ParticlesContainer from './particles';
 import Center from './Center/center';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
+import { Copyright } from './copyright';
 
 function Homepage() {
 
@@ -16,6 +17,8 @@ function Homepage() {
                 <Navbar setCenter={setCenter} />
                 <Center value={center} />
             </I18nextProvider>,
+
+            <Copyright />
         </div>
     );
 };

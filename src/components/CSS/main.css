@@ -11,6 +11,12 @@
     --turquoise: #2DDABAff;
 }
 
+.footer{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    filter: drop-shadow(0 0 0.1rem #2DDABA);
+}
+
 body {
     background: url('../background/wallpaper.jpg');
 
