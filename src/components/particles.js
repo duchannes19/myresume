@@ -15,21 +15,19 @@ class ParticlesContainer extends React.PureComponent {
       },
       particles: {
         number: {
-          value: 80, // Default number of particles
+          value: 80, 
           density: {
             enable: true,
-            value_area: 800 // Default density value
+            value_area: 800 
           }
         }
       }
     };
 
-    // Apply media query to adjust particle number
     const mediaQuery = window.matchMedia("(max-width: 768px)");
 
     if (mediaQuery.matches) {
-      // Set lowest number of particles for small screens
-      options.particles.number.value = 40;
+      options.particles.number.value = 20;
     }
 
     return <Particles options={options} init={this.customInit.bind(this)} />;
