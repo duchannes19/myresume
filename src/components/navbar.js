@@ -20,8 +20,8 @@ const Navbar = ({ setCenter }) => {
     const [selectedLanguage, setLanguage] = useState('en');
 
     const pages = [t('navbar.about'), t('navbar.resume'), 'Portfolio', t('navbar.contact')];
-    const it = { flag: <Flag country="IT" className='flag' />, name: 'Italian', value: 'it' }
-    const en = { flag: <Flag country="US" className='flag' />, name: 'English', value: 'en' }
+    const it = { flag: <Flag country="IT" className='flag' />, name: t('navbar.italian'), value: 'it' }
+    const en = { flag: <Flag country="US" className='flag' />, name: t('navbar.english'), value: 'en' }
     const settings = [it, en];
 
     const changeLanguage = (language) => {

@@ -10,6 +10,8 @@
     "navbar.resume": "Resume",
     "navbar.contact": "Contacts",
     "navbar.language": "Change Language",
+    "navbar.italian": "Italian",
+    "navbar.english": "English",
 
     "about.title": "About Me",
     "about.description": "<p>Hi, I am <b>Andrea</b>, a full stack developer.</p><p style={{ margin: '1rem' }}>I am a <b>Computer Engineering</b> graduate and have a passion for creating and experimenting with programming languages.</p><p>I want to put my <b>knowledge</b> and <b>skills</b> to contribute to the development of quality software.</p><p>I am <b>motivated</b> to continuously <b>learn</b> and take on complex challenges.</p>",
