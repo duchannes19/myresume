@@ -1,0 +1,26 @@
+{
+    "resume.title": "Il Mio Curriculum",
+    "resume.languages.title": "Linguaggi",
+    "resume.languages.description": "<p>Parlo <b>Inglese</b> ed <b>Italiano</b>.</p>",
+    "resume.skills.title": "Skills",
+    "resume.other.title": "Altro",
+    "resume.other.description": "<p>Lavoro anche con <b>Photoshop</b>, <b>Audition</b>, <b>Premiere</b> ed altro ancora.</p>",
+
+    "navbar.about": "Informazioni",
+    "navbar.resume": "Curriculum",
+    "navbar.contact": "Contatti",
+    "navbar.language": "Cambia Lingua",
+
+    "about.title": "Informazioni",
+    "about.description": "<p>Ciao, sono <b>Andrea</b>, full stack developer.</p><p style={{ margin: '1rem' }}>Sono laureato in <b>Ingegneria Informatica</b> e ho la passione di creare e sperimentare linguaggi di programmazione.</p><p>Voglio mettere a disposizione le mie <b>conoscenze</b> e <b>competenze</b> per contribuire allo sviluppo di software di qualità.</p><p>Sono <b>motivato</b> a <b>imparare</b> continuamente e ad affrontare sfide complesse.</p>",
+
+    "portfolio.description": "Alcuni dei miei progetti:",
+    "portfolio.backbutton": "Indietro",
+
+    "cipensaele.description": "<p>Questa applicazione è un sistema di calendario e pianificazione basato sul web che consiste in un frontend React e un backend Node.js. Il frontend è responsabile del rendering dell'interfaccia utente e della gestione delle interazioni utente, mentre il backend si occupa della logica e della gestione dei dati.</p><p>Il frontend React utilizza componenti e gestione dello stato per creare un'interfaccia utente responsive e interattiva. Include funzionalità come la visualizzazione di una vista calendario, la pianificazione di appuntamenti, la gestione delle prenotazioni e la generazione di report. Il frontend comunica con il backend tramite richieste HTTP per recuperare e aggiornare i dati.</p><p>Nel backend, viene utilizzato Node.js per creare un'applicazione lato server che gestisce la logica di business e le operazioni sui dati. Fornisce API per consentire al frontend di interagire, abilitando funzionalità come la creazione, l'aggiornamento e l'eliminazione di eventi nel calendario, la gestione dell'autenticazione e dell'autorizzazione degli utenti e la gestione di varie operazioni relative ai dati. Il backend comunica con un database per archiviare e recuperare i dati in modo sicuro.</p><p>L'applicazione implementa varie funzionalità per migliorare l'esperienza utente e le prestazioni. Vengono utilizzate strategie di caching per ottimizzare il recupero dei dati e ridurre le richieste al server. L'applicazione incorpora anche tecniche di crittografia per proteggere i dati sensibili, garantendo riservatezza e integrità.</p><p>Il <b>codice</b> è ospitato sul mio Github ed è privato.</p>",
+
+    "contacts.title": "I Miei Contatti",
+    "contacts.social": "<p>Mi trovi su</p>",
+    "contacts.mail": "<p>La mia email è <b>andreamassignan98@protonmail.com</b></p>"
+    
+  }

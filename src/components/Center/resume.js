@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import DownloadIcon from '@mui/icons-material/Download';
 import ProgressBar from './progress';
 import cv from '../resume/MyCV.pdf'
+import { useTranslation, Trans} from 'react-i18next';
 
 function downloadFile(fileUrl) {
     const link = document.createElement('a');
@@ -14,6 +15,7 @@ function downloadFile(fileUrl) {
     document.body.removeChild(link);
 }
 const Resume = () => {
+    const { t } = useTranslation();
 
     const handleDownload = () => {
         downloadFile(cv);
@@ -21,11 +23,11 @@ const Resume = () => {
 
     return (
         <div className='info'>
-            <h3 className='center-title'>My Resume</h3>
+            <h3 className='center-title'>{t('resume.title')}</h3>
 
             <div className='languages'>
-            <h4><b>Languages</b></h4>
-            <p>I speak <b>English</b> and <b>Italian</b>.</p>
+            <h4><b>{t('resume.languages.title')}</b></h4>
+            <Trans i18nKey="resume.languages.description" components={{ b: <b /> }} />
             </div>
 
             <h4 style={{ marginTop: '1rem' }}><b>Skills</b></h4>
@@ -53,8 +55,8 @@ const Resume = () => {
 
 
             <div className='other'>
-            <h4><b>Other</b></h4>
-            <p>I also work my way around with <b>Photoshop</b>, <b>Audition</b>, <b>Premiere</b> and other tools.</p>
+            <h4><b>{t('resume.other.title')}</b></h4>
+            <Trans i18nKey="resume.other.description" components={{ b: <b /> }} />
             </div>
 
             <Stack direction="row" spacing={2}>

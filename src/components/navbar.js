@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,13 +13,22 @@ import logo from './images/logo.png'
 import Language from './language';
 import Flag from 'react-flagkit';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useTranslation } from 'react-i18next';
 
-const pages = ['About', 'Resume', 'Portfolio', 'Contact'];
-const italian = { flag: <Flag country="IT" className='flag' />, name: 'Italian' }
-const english = { flag: <Flag country="US" className='flag' />, name: 'English' }
-const settings = [italian, english];
+const Navbar = ({ setCenter }) => {
+    const { i18n, t } = useTranslation();
+    const [selectedLanguage, setLanguage] = useState('en');
 
-const Navbar = ({ lan, setLan, setCenter }) => {
+    const pages = [t('navbar.about'), t('navbar.resume'), 'Portfolio', t('navbar.contact')];
+    const it = { flag: <Flag country="IT" className='flag' />, name: 'Italian', value: 'it' }
+    const en = { flag: <Flag country="US" className='flag' />, name: 'English', value: 'en' }
+    const settings = [it, en];
+
+    const changeLanguage = (language) => {
+        const selectedLanguage = language;
+        i18n.changeLanguage(selectedLanguage);
+    };
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -46,7 +55,7 @@ const Navbar = ({ lan, setLan, setCenter }) => {
         <AppBar position="static">
             <Toolbar disableGutters className='navbar'>
                 <IconButton sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 1 }} >
-                    <img src={logo} alt='navbar-logo' className='navbar-logo'loading="lazy"/>
+                    <img src={logo} alt='navbar-logo' className='navbar-logo' loading="lazy" />
                 </IconButton>
 
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -105,12 +114,12 @@ const Navbar = ({ lan, setLan, setCenter }) => {
                     ))}
                 </Box>
 
-                <img src={logo} alt='navbar-logo' className='navbar-logo-mobile' loading="lazy"/>
+                <img src={logo} alt='navbar-logo' className='navbar-logo-mobile' loading="lazy" />
 
                 <Box sx={{ flexGrow: 0 }}>
-                    <Tooltip title="Change Language">
+                    <Tooltip title={t('navbar.language')}>
                         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, mr: 2 }} >
-                            <Language />
+                            <Language selectedLanguage={selectedLanguage} />
                         </IconButton>
                     </Tooltip>
                     <Menu
@@ -132,7 +141,12 @@ const Navbar = ({ lan, setLan, setCenter }) => {
                         {settings.map((setting) => (
                             <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
                                 {setting.flag}
-                                <Typography textAlign="center">{setting.name}</Typography>
+                                <Typography textAlign="center"
+                                    onClick={() => {
+                                        setLanguage(setting.value);
+                                        changeLanguage(setting.value);
+                                    }}
+                                >{setting.name}</Typography>
                             </MenuItem>
                         ))}
                     </Menu>

@@ -84,6 +84,11 @@ body {
     margin: auto;
     margin-top: 3rem;
     margin-bottom: 2rem;
+    filter: drop-shadow(0 0 0.4rem #2DDABA);
+}
+
+.project-carousel .carousel{
+    cursor: pointer;
 }
 
 .project {
@@ -138,12 +143,28 @@ body {
     align-items: center;
 }
 
+.contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+.contacts .sub-contact{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .center-container {
     display: flex;
     justify-content: center;
     width: 80%;
     margin: auto;
-    margin-top: 12rem;
+    margin-top: 7rem;
     min-height: 50vh;
     background-color: var(--dark-purple-blur);
     backdrop-filter: blur(2px);
@@ -166,6 +187,33 @@ body {
     padding-right: 1rem;
 }
 
+.fullscreen-image-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+  }
+  
+  .fullscreen-image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9998;
+  }
+  
+  .fullscreen-image {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
 
 @media only screen and (max-width: 768px) {
 

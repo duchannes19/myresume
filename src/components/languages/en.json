@@ -1,0 +1,26 @@
+{
+    "resume.title": "My Resume",
+    "resume.languages.title": "Languages",
+    "resume.languages.description": "<p>I speak <b>English</b> and <b>Italian</b>.</p>",
+    "resume.skills.title": "Skills",
+    "resume.other.title": "Other",
+    "resume.other.description": "<p>I also work my way around with <b>Photoshop</b>, <b>Audition</b>, <b>Premiere</b> and other tools.</p>",
+
+    "navbar.about": "About",
+    "navbar.resume": "Resume",
+    "navbar.contact": "Contacts",
+    "navbar.language": "Change Language",
+
+    "about.title": "About Me",
+    "about.description": "<p>Hi, I am <b>Andrea</b>, a full stack developer.</p><p style={{ margin: '1rem' }}>I am a <b>Computer Engineering</b> graduate and have a passion for creating and experimenting with programming languages.</p><p>I want to put my <b>knowledge</b> and <b>skills</b> to contribute to the development of quality software.</p><p>I am <b>motivated</b> to continuously <b>learn</b> and take on complex challenges.</p>",
+    
+    "portfolio.description": "Here are some of my projects:",
+    "portfolio.backbutton": "Back",
+
+    "cipensaele.description": "<p>This application is a web-based calendar and scheduling system that consists of a React frontend and a Node.js backend. The frontend is responsible for rendering the user interface and handling user interactions, while the backend handles the logic and data management.</p><p>The React frontend utilizes components and state management to create a responsive and interactive user interface. It includes features such as displaying a calendar view, scheduling appointments, managing reservations, and generating reports. The frontend communicates with the backend through HTTP requests to fetch and update data.</p><p>On the backend, Node.js is used to build a server-side application that handles the business logic and data operations. It provides APIs for the frontend to interact with, enabling functionalities such as creating, updating, and deleting calendar events, managing user authentication and authorization, and handling various data-related operations. The backend communicates with a database to store and retrieve data securely.</p><p>The application implements various features to enhance user experience and performance. Caching strategies are utilized to optimize data retrieval and minimize server requests. The application also incorporates encryption techniques to secure sensitive data, ensuring confidentiality and integrity.</p><p>The <b>code</b> is hosted on my Github and is private.</p>",
+
+    "contacts.title": "My Contacts",
+    "contacts.social": "<p>You can find me on</p>",
+    "contacts.mail": "<p>My email is <b>andreamassignan98@protonmail.com</b></p>"
+
+  }

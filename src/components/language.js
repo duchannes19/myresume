@@ -1,11 +1,12 @@
 import React from 'react'
 import Flag from 'react-flagkit';
 
-function Language() {
+function Language({selectedLanguage}) {
 
     return (
         <>
-            <Flag country="GB" />
+            {selectedLanguage === 'en' && <Flag country="GB" />}
+            {selectedLanguage === 'it' && <Flag country='IT' />}
         </>
     );
 

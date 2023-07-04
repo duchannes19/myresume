@@ -1,14 +1,15 @@
 import React from 'react'
 import pc from '../images/about.gif'
+import { useTranslation, Trans} from 'react-i18next';
 
 const About = () => {
+    const { t } = useTranslation();
+
     return (<div className='info'>
-        <h3 className='center-title'>About Me</h3>
+        <h3 className='center-title'>{t('about.title')}</h3>
         <>
-        <p>Hi I am <b>Andrea</b>, full stack developer.</p>
-        <p style={{margin: '1rem'}}>I am a <b>Computer Engineering</b> graduate and have a passion for creating and experimenting with programming languages.</p>
-        <p>I want to put my knowledge and <b>skills</b> to contribute to the development of quality software.</p>
-        <p>I am <b>motivated</b> to continuously learn and take on complex challenges.</p>
+        <Trans i18nKey="about.description" components={{ b: <b /> }} />
+
         <img src={pc} alt='about' className='about-gif' loading="lazy"/>
         </>
     </div>);

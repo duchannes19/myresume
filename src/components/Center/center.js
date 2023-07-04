@@ -2,6 +2,7 @@ import React from 'react'
 import About from './about';
 import Resume from './resume';
 import Portfolio from './portfolio';
+import Contacts from './contact';
 function Center({value}){
 
     return(
@@ -10,6 +11,7 @@ function Center({value}){
                 {value === 0 && <About />}
                 {value === 1 && <Resume />}
                 {value === 2 && <Portfolio />}
+                {value === 3 && <Contacts />}
             </div>
         </div>
     );
