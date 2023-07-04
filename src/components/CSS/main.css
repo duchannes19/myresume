@@ -250,4 +250,10 @@ body {
     .project-carousel{
         width: 90%;
     }
+
+    .contacts .sub-contact{
+        flex-direction: column;
+        gap: 0px;
+        margin-top: 3rem
+    }
 }
