@@ -3,6 +3,7 @@ import Particles from "react-particles";
 import { loadLinksPreset } from "tsparticles-preset-links";
 
 class ParticlesContainer extends React.PureComponent {
+  
   async customInit(engine) {
     await loadLinksPreset(engine);
   }
@@ -15,7 +16,7 @@ class ParticlesContainer extends React.PureComponent {
       },
       particles: {
         number: {
-          value: 80, 
+          value: 40, 
           density: {
             enable: true,
             value_area: 800 
@@ -28,6 +29,7 @@ class ParticlesContainer extends React.PureComponent {
 
     if (mediaQuery.matches) {
       options.particles.number.value = 20;
+      options.fpsLimit = 30;
     }
 
     return <Particles options={options} init={this.customInit.bind(this)} />;
