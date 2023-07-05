@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import DownloadIcon from '@mui/icons-material/Download';
 import ProgressBar from './progress';
 import cv from '../resume/MyCV.pdf'
-import { useTranslation, Trans} from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 
 function downloadFile(fileUrl) {
     const link = document.createElement('a');

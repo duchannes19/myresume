@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Cipensaele from './projects/cipensaele';
 import { Button } from '@mui/material';
 import First from '../images/1.png';
+import Second from '../images/d1.png';
 import { useTranslation } from 'react-i18next';
+import Dohr from './projects/dohr';
 
 function Portfolio() {
     const [showProject, setShowProject] = useState(0);
@@ -21,6 +23,12 @@ function Portfolio() {
                         >
                             <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(1)}>Cipensaele</Button>
                         </div>
+                        <div
+                            className='project'
+                            style={{ backgroundImage: `url(${Second})` }}
+                        >
+                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(2)}>Dohr</Button>
+                        </div>
                     </div>
                 </>
             )}
@@ -36,6 +44,7 @@ function Portfolio() {
                 </Button>
             )}
             {showProject === 1 && <Cipensaele />}
+            {showProject === 2 && <Dohr />}
         </div>
     );
 }
