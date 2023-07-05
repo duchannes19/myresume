@@ -8,14 +8,26 @@ import DownloadIcon from '@mui/icons-material/Download';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { useTranslation, Trans } from 'react-i18next';
+import english from '../../dohr/Dohr_en.pdf';
+import italian from '../../dohr/Dohr_it.pdf';
+
+function downloadFile(fileUrl) {
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = fileUrl.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
 function Dohr() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const handleDownload = () => {
-        return
+        if(i18n.language === 'en'){return downloadFile(english);}
+        else{return downloadFile(italian);}
     };
 
     const images = [
