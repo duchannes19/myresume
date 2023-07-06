@@ -79,6 +79,7 @@ body {
 
 .projects-container {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -101,8 +102,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10rem;
-    height: 10rem;
+    width: 14rem;
+    height: 14rem;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

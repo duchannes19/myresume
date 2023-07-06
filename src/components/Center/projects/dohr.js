@@ -23,7 +23,7 @@ function downloadFile(fileUrl) {
 function Dohr() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
 
     const handleDownload = () => {
         if(i18n.language === 'en'){return downloadFile(english);}
@@ -71,7 +71,7 @@ function Dohr() {
                 <Trans i18nKey="dohr.description" components={{ b: <b /> }} />
             </div>
             <div style={{marginTop: '2rem'}}>
-                {t("dohr.d.download")}
+                <Trans i18nKey="dohr.d.download" components={{ b: <b /> }} />
             </div>
             <Stack direction="row" spacing={2} style={{ marginTop: '2rem' }}>
                 <Button color='warning' variant="outlined" endIcon={<DownloadIcon />}

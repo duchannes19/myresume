@@ -59,7 +59,7 @@ const Resume = () => {
             <Trans i18nKey="resume.other.description" components={{ b: <b /> }} />
             </div>
 
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" spacing={2} style={{marginBottom: '1rem'}}>
                 <Button color='warning' variant="outlined" endIcon={<DownloadIcon />}
                 onClick={handleDownload}
                 >
