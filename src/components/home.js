@@ -16,7 +16,7 @@ function Homepage() {
             <I18nextProvider i18n={i18n}>
                 <Navbar setCenter={setCenter} />
                 <Center value={center} />
-            </I18nextProvider>,
+            </I18nextProvider>
 
             <Copyright />
         </div>
