@@ -25,6 +25,14 @@ const Resume = () => {
         <div className='info'>
             <h3 className='center-title'>{t('resume.title')}</h3>
 
+            <Stack direction="row" spacing={2} style={{marginTop: '2rem'}}>
+                <Button color='warning' variant="outlined" endIcon={<DownloadIcon />}
+                onClick={handleDownload}
+                >
+                    Download
+                </Button>
+            </Stack>
+
             <div className='languages'>
             <h4><b>{t('resume.languages.title')}</b></h4>
             <Trans i18nKey="resume.languages.description" components={{ b: <b /> }} />
@@ -59,13 +67,6 @@ const Resume = () => {
             <Trans i18nKey="resume.other.description" components={{ b: <b /> }} />
             </div>
 
-            <Stack direction="row" spacing={2} style={{marginBottom: '1rem'}}>
-                <Button color='warning' variant="outlined" endIcon={<DownloadIcon />}
-                onClick={handleDownload}
-                >
-                    Download
-                </Button>
-            </Stack>
         </div>
     );
 
