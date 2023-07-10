@@ -3,6 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import { useTranslation, Trans } from 'react-i18next';
 
 function Contacts(){
@@ -31,6 +32,10 @@ function Contacts(){
                 <div className='sub-contact'>
                     <EmailIcon/>
                     <Trans i18nKey="contacts.mail" components={{ b: <b /> }} />
+                </div>
+                <div className='sub-contact'>
+                    <PhoneIphoneIcon/>
+                    <Trans i18nKey="contacts.phone" components={{ b: <b /> }} />
                 </div>
             </div>
         </div>
