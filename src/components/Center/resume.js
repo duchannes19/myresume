@@ -29,7 +29,7 @@ const Resume = () => {
                 <Button color='warning' variant="outlined" endIcon={<DownloadIcon />}
                 onClick={handleDownload}
                 >
-                    Download
+                    Download CV
                 </Button>
             </Stack>
 
