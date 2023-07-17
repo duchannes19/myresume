@@ -61,6 +61,13 @@ const Resume = () => {
                 </div>
             </div>
 
+            <div className='skills' style={{ marginTop: '1rem' }}>
+                <div className='skills_sub'>
+                    <ProgressBar percentage={55} label='PostgreSQL' />
+                    <ProgressBar percentage={50} label='MySQL' />
+                </div>
+            </div>
+
 
             <div className='other'>
             <h4><b>{t('resume.other.title')}</b></h4>
