@@ -33,10 +33,6 @@ function Contacts(){
                     <EmailIcon/>
                     <Trans i18nKey="contacts.mail" components={{ b: <b /> }} />
                 </div>
-                <div className='sub-contact'>
-                    <PhoneIphoneIcon/>
-                    <Trans i18nKey="contacts.phone" components={{ b: <b /> }} />
-                </div>
             </div>
         </div>
     );
