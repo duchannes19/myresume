@@ -41,7 +41,7 @@ const Resume = () => {
             <h4 style={{ marginTop: '1rem' }}><b>Skills</b></h4>
             <div className='skills'>
                 <div className='skills_sub'>
-                    <ProgressBar percentage={70} label='React' />
+                    <ProgressBar percentage={70} label='ReactJs' />
                     <ProgressBar percentage={55} label='NodeJS' />
                 </div>
                 <div className='skills_sub'>
