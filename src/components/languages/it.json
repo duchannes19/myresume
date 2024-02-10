@@ -14,7 +14,7 @@
     "navbar.english": "Inglese",
 
     "about.title": "Informazioni",
-    "about.description": "<p>Ciao, sono <b>Andrea</b>, full stack developer.</p><p style={{ margin: '1rem' }}>Sono laureato in <b>Ingegneria Informatica</b> e ho la passione di creare e sperimentare con i linguaggi di programmazione.</p><p>Voglio mettere a disposizione le mie <b>conoscenze</b> e <b>competenze</b> per contribuire allo sviluppo di software di qualità.</p><p>Sono <b>motivato</b> a <b>imparare</b> continuamente e ad affrontare sfide complesse.</p>",
+    "about.description": "<p>Ciao, sono <b>Andrea</b>, full stack developer.</p><p style={{ margin: '1rem' }}>Sono laureato in <b>Ingegneria Informatica</b> e ho la passione di creare e sperimentare con i linguaggi di programmazione.</p><p>Voglio mettere a disposizione le mie <b>conoscenze</b> e <b>competenze</b> per contribuire allo sviluppo di software di qualità.</p><p>Sono <b>motivato</b> a <b>imparare</b> continuamente e ad affrontare sfide complesse.</p><p> Al momento sto studiando <b>Computer Science</b> all'università <b>La Sapienza</b>.</p>",
 
     "portfolio.description": "Alcuni dei miei progetti:",
     "portfolio.backbutton": "Indietro",
