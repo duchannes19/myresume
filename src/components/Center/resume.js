@@ -33,12 +33,16 @@ const Resume = () => {
                 </Button>
             </Stack>
 
+            <hr style={{marginTop: '3rem', width: '100%'}}/>
+
             <div className='languages'>
-            <h4><b>{t('resume.languages.title')}</b></h4>
+            <h4 style={{fontSize: '1.2rem'}}><b>{t('resume.languages.title')}</b></h4>
             <Trans i18nKey="resume.languages.description" components={{ b: <b /> }} />
             </div>
 
-            <h4 style={{ marginTop: '1rem' }}><b>Skills</b></h4>
+            <hr style={{marginTop: '1rem', marginBottom: '2rem', width: '100%'}}/>
+
+            <h4 style={{ marginTop: '1rem', fontSize: '1.2rem' }}><b>Skills</b></h4>
             <div className='skills'>
                 <div className='skills_sub'>
                     <ProgressBar percentage={70} label='ReactJs' />
@@ -52,12 +56,12 @@ const Resume = () => {
 
             <div className='skills' style={{ marginTop: '1rem' }}>
                 <div className='skills_sub'>
-                    <ProgressBar percentage={95} label='HTML' />
+                    <ProgressBar percentage={60} label='Solidity' />
                     <ProgressBar percentage={40} label='C/C++' />
                 </div>
                 <div className='skills_sub'>
                     <ProgressBar percentage={78} label='CSS' />
-                    <ProgressBar percentage={55} label='Python' />
+                    <ProgressBar percentage={75} label='Python' />
                 </div>
             </div>
 
@@ -68,9 +72,10 @@ const Resume = () => {
                 </div>
             </div>
 
+            <hr style={{marginTop: '1rem', marginBottom: '1rem', width: '100%'}}/>
 
             <div className='other'>
-            <h4><b>{t('resume.other.title')}</b></h4>
+            <h4 style={{fontSize: '1.2rem'}}><b>{t('resume.other.title')}</b></h4>
             <Trans i18nKey="resume.other.description" components={{ b: <b /> }} />
             </div>
 
