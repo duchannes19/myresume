@@ -8,7 +8,6 @@ import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import './CSS/main.css'
 import logo from './images/logo.png'
 import Language from './language';
 import Flag from 'react-flagkit';
