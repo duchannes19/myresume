@@ -25,7 +25,10 @@
     "dohr.d.download": "You can read more by downloading my thesis that I made with my friend and collegue <b>Paolo Saquella</b>.",
 
     "fourever.description": "The project involves the creation of a DApp that allows users and companies to manage their own NFTs. The DApp is built on the Ethereum blockchain and utilizes smart contracts to manage the creation, ownership, and transfer of NFTs. The DApp provides a user-friendly interface for users to handle and manage NFTs, as well as a marketplace for buying and selling NFTs. The DApp also includes a Quest system that allows users to earn rewards by completing tasks and challenges. The DApp is designed to be secure, scalable, and user-friendly, providing a seamless experience for users to manage NFTs in the context of an online game.",
-    "fourever.d.download": "You can read more by downloading my report that I made with my friend and collegue <b>Cesare Corsi</b>.",
+    "fourever.d.download": "You can read more by downloading the report that I made with my friend and collegue <b>Cesare Corsi</b>.",
+
+    "angel.description": "The following project is a tool used to analyze URL requests during navigation and evaluate the security of the website based on the predictions of a Convolutional Neural Network. The tool is implemented as a Chrome extension and a Flask server. The extension intercepts requests made by the browser and sends them to the server for analysis. The server uses a model trained by us with a modified dataset to predict the security of the website based on the URL and sends the result back to the extension. The extension then displays the result to the user.",
+    "angel.d.download": "You can read more by downloading the report that I made with my friend and collegue <b>Cesare Corsi</b>.",
 
     "contacts.title": "My Contacts",
     "contacts.social": "<p>You can find me on</p>",

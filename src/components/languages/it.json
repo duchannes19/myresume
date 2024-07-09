@@ -27,6 +27,9 @@
     "fourever.description": "Il progetto prevede la creazione di una DApp che consente a utenti e aziende di gestire i propri NFT. La DApp è costruita sulla blockchain di Ethereum e utilizza contratti intelligenti per gestire la creazione, la proprietà e il trasferimento degli NFT. La DApp fornisce agli utenti un'interfaccia facile da usare per gestire gli NFT e un mercato per l'acquisto e la vendita di NFT. La DApp include anche un sistema di missioni che consente agli utenti di guadagnare ricompense completando compiti e sfide. La DApp è stata progettata per essere sicura, scalabile e facile da usare, fornendo agli utenti un'esperienza senza soluzione di continuità nella gestione degli NFT nel contesto di un gioco online.",
     "fourever.d.download": "Puoi leggerne di più scaricando il report che ho realizzato con il mio amico e collega <b>Cesare Corsi</b>.",
 
+    "angel.description" : "Il seguente progetto è uno strumento utilizzato per analizzare le richieste di URL durante la navigazione e valutare la sicurezza del sito web in base alle previsioni di una rete neurale convoluzionale. Lo strumento è implementato come un'estensione di Chrome e un server Flask. L'estensione intercetta le richieste effettuate dal browser e le invia al server per l'analisi. Il server utilizza un modello addestrato da noi con un set di dati modificato per prevedere la sicurezza del sito web in base all'URL e invia il risultato all'estensione. L'estensione visualizza quindi il risultato all'utente.",
+    "angel.d.download": "Puoi leggerne di più scaricando il report che ho realizzato con il mio amico e collega <b>Cesare Corsi</b>.",
+
     "contacts.title": "I Miei Contatti",
     "contacts.social": "<p>Mi trovi su</p>",
     "contacts.mail": "<p>La mia email è <b>mail@andreamassignan.xyz</b></p>",
