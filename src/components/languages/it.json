@@ -30,6 +30,9 @@
     "angel.description" : "Il seguente progetto è uno strumento utilizzato per analizzare le richieste di URL durante la navigazione e valutare la sicurezza del sito web in base alle previsioni di una rete neurale convoluzionale. Lo strumento è implementato come un'estensione di Chrome e un server Flask. L'estensione intercetta le richieste effettuate dal browser e le invia al server per l'analisi. Il server utilizza un modello addestrato da noi con un set di dati modificato per prevedere la sicurezza del sito web in base all'URL e invia il risultato all'estensione. L'estensione visualizza quindi il risultato all'utente.",
     "angel.d.download": "Puoi leggerne di più scaricando il report che ho realizzato con il mio amico e collega <b>Cesare Corsi</b>.",
 
+    "psegment.description": "Questo progetto mira a semplificare e supportare il rilevamento della prostata attraverso un frontend di facile utilizzo e un backend Python che gestisce l'elaborazione della rete neurale convoluzionale (CNN). Nello specifico, si tratta di un backend Python e di un'applicazione frontend Vite.js incentrata sulla segmentazione automatica di regioni tumorali della prostata in immagini MRI e CT. La rete neurale U-Net è stata addestrata su due diversi datasets per ottenere un ensemble di tre diversi modelli che lavorano insieme per fornire la previsione più accurata nonostante le limitazioni dei datasets stessi. Questo lavoro è stato ispirato dai risultati di 'Recent Automatic Segmentation Algorithms of MRI Prostate Regions: A Review'.",
+    "psegment.d.download": "Puoi leggerne di più scaricando la presentazione che ho realizzato con il mio amico e collega <b>Cesare Corsi</b>.",
+
     "contacts.title": "I Miei Contatti",
     "contacts.social": "<p>Mi trovi su</p>",
     "contacts.mail": "<p>La mia email è <b>mail@andreamassignan.xyz</b></p>",

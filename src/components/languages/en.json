@@ -30,6 +30,9 @@
     "angel.description": "The following project is a tool used to analyze URL requests during navigation and evaluate the security of the website based on the predictions of a Convolutional Neural Network. The tool is implemented as a Chrome extension and a Flask server. The extension intercepts requests made by the browser and sends them to the server for analysis. The server uses a model trained by us with a modified dataset to predict the security of the website based on the URL and sends the result back to the extension. The extension then displays the result to the user.",
     "angel.d.download": "You can read more by downloading the report that I made with my friend and collegue <b>Cesare Corsi</b>.",
 
+    "psegment.description": "This project aims to simplify and support prostate detection through a user-friendly frontend and a Python backend that handles convolutional neural network (CNN) processing. Specifically, it is a Python backend and Vite.js frontend application focused on automatic segmentation of prostate cancer regions in MRI and CT images. The U-Net neural network was trained on two different datasets to obtain an ensemble of three different models that work together to provide the most accurate prediction despite dataset limitations. This work was inspired by the results of 'Recent Automatic Segmentation Algorithms of MRI Prostate Regions: A Review'.",
+    "psegment.d.download": "You can read more by downloading the presentation that I made with my friend and collegue <b>Cesare Corsi</b>.",
+
     "contacts.title": "My Contacts",
     "contacts.social": "<p>You can find me on</p>",
     "contacts.mail": "<p>My email is <b>mail@andreamassignan.xyz</b></p>",

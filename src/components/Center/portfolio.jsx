@@ -6,11 +6,13 @@ import First from '../images/1.png';
 import Second from '../images/d1.png';
 import Third from '../images/fourever1.png';
 import Fourth from '../images/angel1.png';
+import Fifth from '../images/psegment1.png';
 
 import Cipensaele from './projects/cipensaele';
 import Dohr from './projects/dohr';
 import FourEver from './projects/fourever';
 import Angel from './projects/angel';
+import PSegment from './projects/psegment';
 
 function Portfolio() {
     const [showProject, setShowProject] = useState(0);
@@ -41,6 +43,9 @@ function Portfolio() {
                         <div className='project' style={{ backgroundImage: `url(${Fourth})` }}>
                             <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(4)}>Angel</Button>
                         </div>
+                        <div className='project' style={{ backgroundImage: `url(${Fifth})` }}>
+                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(5)}>P-Segmentation</Button>
+                        </div>
                     </div>
                 </>
             )}
@@ -59,6 +64,7 @@ function Portfolio() {
             {showProject === 2 && <Dohr />}
             {showProject === 3 && <FourEver />}
             {showProject === 4 && <Angel />}
+            {showProject === 5 && <PSegment />}
         </div>
     );
 }
