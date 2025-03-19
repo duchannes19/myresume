@@ -8,6 +8,7 @@ import Third from '../images/fourever1.png';
 import Fourth from '../images/angel1.png';
 import Fifth from '../images/psegment1.png';
 import Sixth from '../images/iot1.png'
+import Seventh from '../images/ml1.avif';
 
 import Cipensaele from './projects/cipensaele';
 import Dohr from './projects/dohr';
@@ -15,6 +16,7 @@ import FourEver from './projects/fourever';
 import Angel from './projects/angel';
 import PSegment from './projects/psegment';
 import IoT from './projects/iot';
+import ML from './projects/ml';
 
 function Portfolio() {
     const [showProject, setShowProject] = useState(0);
@@ -51,6 +53,9 @@ function Portfolio() {
                         <div className='project' style={{ backgroundImage: `url(${Sixth})` }}>
                             <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(6)}>IoT</Button>
                         </div>
+                        <div className='project' style={{ backgroundImage: `url(${Seventh})` }}>
+                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(7)}>Machine Learning</Button>
+                        </div>
                     </div>
                 </>
             )}
@@ -71,6 +76,7 @@ function Portfolio() {
             {showProject === 4 && <Angel />}
             {showProject === 5 && <PSegment />}
             {showProject === 6 && <IoT />}
+            {showProject === 7 && <ML />}
         </div>
     );
 }
