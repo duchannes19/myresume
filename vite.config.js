@@ -133,13 +133,11 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         output: {
           manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('react')) return 'vendor-react'
-              if (id.includes('@mui')) return 'vendor-mui'
-              if (id.includes('i18next')) return 'vendor-i18n'
-              if (id.includes('tsparticles')) return 'vendor-particles'
-              return 'vendor'
-            }
+            if (!id.includes('node_modules')) return
+            if (id.includes('@mui')) return 'vendor-mui'
+            if (id.includes('tsparticles')) return 'vendor-particles'
+            if (id.includes('i18next')) return 'vendor-i18n'
+            return 'vendor'
           },
           chunkFileNames: 'assets/js/[name]-[hash].js',
           entryFileNames: 'assets/js/[name]-[hash].js',
