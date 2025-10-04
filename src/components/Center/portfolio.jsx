@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
-import First from '../images/1.png';
-import Second from '../images/d1.png';
-import Third from '../images/fourever1.png';
-import Fourth from '../images/angel1.png';
-import Fifth from '../images/psegment1.png';
-import Sixth from '../images/iot1.png'
-import Seventh from '../images/ml1.avif';
+import ResponsiveImage from '../ResponsiveImage';
+import { projectCardMedia } from './projectCardMedia';
 
 import Cipensaele from './projects/cipensaele';
 import Dohr from './projects/dohr';
@@ -22,6 +17,44 @@ function Portfolio() {
     const [showProject, setShowProject] = useState(0);
     const { t } = useTranslation();
 
+    const cards = useMemo(() => ([
+        {
+            id: 1,
+            label: 'Cipensaele',
+            media: projectCardMedia.cipensaele,
+        },
+        {
+            id: 2,
+            label: 'Dohr',
+            media: projectCardMedia.dohr,
+        },
+        {
+            id: 3,
+            label: '4Ever',
+            media: projectCardMedia.fourever,
+        },
+        {
+            id: 4,
+            label: 'Angel',
+            media: projectCardMedia.angel,
+        },
+        {
+            id: 5,
+            label: 'P-Segmentation',
+            media: projectCardMedia.psegment,
+        },
+        {
+            id: 6,
+            label: 'IoT',
+            media: projectCardMedia.iot,
+        },
+        {
+            id: 7,
+            label: 'Machine Learning',
+            media: projectCardMedia.ml,
+        },
+    ]), []);
+
     return (
         <div className='info'>
             {showProject === 0 && (
@@ -29,33 +62,25 @@ function Portfolio() {
                     <h3 className='center-title'>Portfolio</h3>
                     <p>{t('portfolio.description')}</p>
                     <div className='projects-container'>
-                        <div
-                            className='project'
-                            style={{ backgroundImage: `url(${First})` }}
-                        >
-                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(1)}>Cipensaele</Button>
-                        </div>
-                        <div
-                            className='project'
-                            style={{ backgroundImage: `url(${Second})` }}
-                        >
-                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(2)}>Dohr</Button>
-                        </div>
-                        <div className='project' style={{ backgroundImage: `url(${Third})` }}>
-                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(3)}>4Ever</Button>
-                        </div>
-                        <div className='project' style={{ backgroundImage: `url(${Fourth})` }}>
-                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(4)}>Angel</Button>
-                        </div>
-                        <div className='project' style={{ backgroundImage: `url(${Fifth})` }}>
-                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(5)}>P-Segmentation</Button>
-                        </div>
-                        <div className='project' style={{ backgroundImage: `url(${Sixth})` }}>
-                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(6)}>IoT</Button>
-                        </div>
-                        <div className='project' style={{ backgroundImage: `url(${Seventh})` }}>
-                            <Button className='project-button' color='secondary' variant='outlined' onClick={() => setShowProject(7)}>Machine Learning</Button>
-                        </div>
+                        {cards.map((card) => (
+                            <div className='project' key={card.id}>
+                                <ResponsiveImage
+                                    data={card.media.picture}
+                                    placeholder={card.media.placeholder}
+                                    alt={card.media.alt}
+                                    sizes='(min-width: 1280px) 320px, (min-width: 768px) 45vw, 85vw'
+                                />
+                                <Button
+                                    className='project-button'
+                                    color='secondary'
+                                    variant='outlined'
+                                    onClick={() => setShowProject(card.id)}
+                                    aria-label={`Open ${card.label} project`}
+                                >
+                                    {card.label}
+                                </Button>
+                            </div>
+                        ))}
                     </div>
                 </>
             )}

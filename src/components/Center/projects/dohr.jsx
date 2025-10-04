@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import Modal from 'react-modal';
-import First from '../../images/d1.png';
-import Second from '../../images/d2.png';
-import Third from '../../images/d3.png';
 import DownloadIcon from '@mui/icons-material/Download';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import { useTranslation, Trans } from 'react-i18next';
 import english from '../../dohr/Dohr_en.pdf';
 import italian from '../../dohr/Dohr_it.pdf';
+import { projectGalleries } from '../projectMedia';
+import { getOptimizedImageUrl } from '../../../utils/image';
 
 function downloadFile(fileUrl) {
     const link = document.createElement('a');
@@ -30,26 +29,21 @@ function Dohr() {
         else{return downloadFile(italian);}
     };
 
-    const images = [
-        {
-            original: First,
-            thumbnail: First,
-            originalWidth: '10rem',
-            thumbnailWidth: '20px',
-        },
-        {
-            original: Second,
-            thumbnail: Second,
-            originalWidth: '10rem',
-            thumbnailWidth: '20px',
-        },
-        {
-            original: Third,
-            thumbnail: Third,
-            originalWidth: '10rem',
-            thumbnailWidth: '20px',
-        },
-    ];
+    const images = useMemo(() => (
+    projectGalleries.dohr.gallery.map(({ large, thumb, alt }) => ({
+            original: getOptimizedImageUrl(large.src, large.width),
+            thumbnail: thumb.src,
+            originalAlt: alt,
+            thumbnailAlt: alt,
+            originalHeight: large.height,
+            originalWidth: large.width,
+            thumbnailHeight: thumb.height,
+            thumbnailWidth: thumb.width,
+            loading: 'lazy',
+            srcSet: large.srcset,
+            sizes: '(min-width: 1024px) 60vw, 90vw',
+        }))
+    ), []);
 
     const openModal = (image) => {
         const width = window.innerWidth;
@@ -87,7 +81,8 @@ function Dohr() {
                     thumbnailPosition='bottom'
                     showPlayButton={false}
                     showThumbnails={false}
-                    onClick={(event) => openModal(event.target.src)}
+                    additionalClass='project-gallery'
+                    onClick={(event) => openModal(event?.target?.currentSrc ?? event?.target?.src)}
                 />
             </div>
 

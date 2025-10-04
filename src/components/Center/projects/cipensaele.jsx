@@ -1,35 +1,30 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import Modal from 'react-modal';
-import First from '../../images/1.png';
-import Second from '../../images/2.png';
-import Third from '../../images/3.png';
 import { Trans } from 'react-i18next';
+
+import { projectGalleries } from '../projectMedia';
+import { getOptimizedImageUrl } from '../../../utils/image';
 
 function Cipensaele() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = [
-    {
-      original: First,
-      thumbnail: First,
-      originalWidth: '10rem',
-      thumbnailWidth: '20px',
-    },
-    {
-      original: Second,
-      thumbnail: Second,
-      originalWidth: '10rem',
-      thumbnailWidth: '20px',
-    },
-    {
-      original: Third,
-      thumbnail: Third,
-      originalWidth: '10rem',
-      thumbnailWidth: '20px',
-    },
-  ];
+  const images = useMemo(() => (
+  projectGalleries.cipensaele.gallery.map(({ large, thumb, alt }) => ({
+      original: getOptimizedImageUrl(large.src, large.width),
+      thumbnail: thumb.src,
+      originalAlt: alt,
+      thumbnailAlt: alt,
+      originalHeight: large.height,
+      originalWidth: large.width,
+      thumbnailHeight: thumb.height,
+      thumbnailWidth: thumb.width,
+      loading: 'lazy',
+      srcSet: large.srcset,
+      sizes: '(min-width: 1024px) 60vw, 90vw',
+    }))
+  ), []);
 
   const openModal = (image) => {
     const width = window.innerWidth;
@@ -57,7 +52,8 @@ function Cipensaele() {
           thumbnailPosition='bottom'
           showPlayButton={false}
           showThumbnails={false}
-          onClick={(event) => openModal(event.target.src)}
+          additionalClass='project-gallery'
+          onClick={(event) => openModal(event?.target?.currentSrc ?? event?.target?.src)}
         />
       </div>
 

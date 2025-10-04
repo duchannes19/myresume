@@ -1,21 +1,21 @@
-import React from 'react'
-import About from './about';
-import Resume from './resume';
-import Portfolio from './portfolio';
-import Contacts from './contact';
-function Center({value}){
+import React, { Suspense } from 'react'
+import SectionLoading from '../SectionLoading'
+import { lazySections } from './sectionRegistry'
 
-    return(
+const getSectionComponent = (index) => lazySections[index] ?? null
+
+function Center({ value }) {
+    const ActiveSection = getSectionComponent(value)
+
+    return (
         <div className='center'>
-            <div className='center-container'> 
-                {value === 0 && <About />}
-                {value === 1 && <Resume />}
-                {value === 2 && <Portfolio />}
-                {value === 3 && <Contacts />}
+            <div className='center-container'>
+                <Suspense fallback={<SectionLoading />}>
+                    {ActiveSection ? <ActiveSection /> : null}
+                </Suspense>
             </div>
         </div>
-    );
+    )
+}
 
-};
-
-export default Center;
+export default Center
