@@ -19,6 +19,7 @@
 body {
     background: url('../background/wallpaper.jpg');
     margin: 0;
+    background-attachment: fixed;
 }
 
 .navbar {
@@ -253,6 +254,10 @@ body {
 
 @media only screen and (max-width: 768px) {
 
+    body {
+        background-attachment: scroll;
+    }
+
     .image-gallery-fullscreen-button .image-gallery-svg{
         display: none;
     }
@@ -271,10 +276,13 @@ body {
         margin-top: 5rem;
         padding-bottom: 2rem;
         width: 90%;
+        backdrop-filter: none;
+        filter: none;
     }
 
     .navbar-logo {
         width: 2.5rem;
+        transition: none;
     }
 
     .navbar-logo-mobile {
@@ -290,10 +298,23 @@ body {
 
     .navbar-buttons {
         font-size: 0.95rem;
+        transition: none;
     }
 
     .project-carousel{
         width: 90%;
+    }
+
+    .project,
+    .center-container,
+    .about-gif {
+        filter: none;
+    }
+
+    .responsive-image__img {
+        transition: opacity 0.3s ease;
+        transform: none;
+        filter: none;
     }
 
     .contacts .sub-contact{
@@ -368,4 +389,23 @@ body {
     filter: blur(0);
     transform: scale(1);
     background-image: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .responsive-image__img {
+        transition: none !important;
+    }
+
+    .section-loading__spinner {
+        animation: none !important;
+    }
 }
