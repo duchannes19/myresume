@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -17,168 +17,187 @@ import logoImage from './images/logo.png?w=96;128&as=picture&imagetools';
 import logoPlaceholder from './images/logo.png?w=24&blur=35&q=45&as=base64&imagetools';
 
 const Navbar = ({ setCenter, preloadSection }) => {
-    const { i18n, t } = useTranslation();
-    const [selectedLanguage, setLanguage] = useState('en');
+  const { i18n, t } = useTranslation();
+  const [selectedLanguage, setLanguage] = useState('en');
 
-    const pages = [t('navbar.about'), t('navbar.resume'), 'Portfolio', t('navbar.contact')];
-    const it = { flag: <Flag country="IT" className='flag' />, name: t('navbar.italian'), value: 'it' }
-    const en = { flag: <Flag country="US" className='flag' />, name: t('navbar.english'), value: 'en' }
-    const settings = [it, en];
+  const pages = [t('navbar.about'), t('navbar.resume'), 'Portfolio', t('navbar.contact')];
+  const it = { flag: <Flag country="IT" className="flag" />, name: t('navbar.italian'), value: 'it' };
+  const en = { flag: <Flag country="US" className="flag" />, name: t('navbar.english'), value: 'en' };
+  const settings = [it, en];
 
-    const changeLanguage = (language) => {
-        const selectedLanguage = language;
-        i18n.changeLanguage(selectedLanguage);
-    };
+  const changeLanguage = (language) => {
+    const selectedLanguage = language;
+    i18n.changeLanguage(selectedLanguage);
+  };
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
-    const handlePrefetch = (value) => {
-        if (typeof preloadSection === 'function') {
-            preloadSection(value);
-        }
-    };
+  const scrollToTop = () => {
+    if (typeof window === 'undefined' || typeof window.scrollTo !== 'function') {
+      return;
+    }
+    // rAF + setTimeout ensures scroll happens after DOM update and layout
+    window.requestAnimationFrame(() => {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 0);
+    });
+  };
 
-    const handlesection = (value) => {
-        handlePrefetch(value);
-        setCenter(value);
-    };
+  const handlePrefetch = (value) => {
+    if (typeof preloadSection === 'function') {
+      preloadSection(value);
+    }
+  };
 
-    return (
-        <AppBar position="static">
-            <Toolbar disableGutters className='navbar'>
-                <IconButton sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 1 }} >
-                    <ResponsiveImage
-                        data={logoImage}
-                        placeholder={logoPlaceholder}
-                        alt='Andrea Massignan personal logo'
-                        className='navbar-logo'
-                        loading='eager'
-                        fetchpriority='high'
-                        useCdn={false}
-                        sizes='64px'
-                    />
-                </IconButton>
+  const handlesection = (value) => {
+    handlePrefetch(value);
+    setCenter(value);
+  };
 
-                <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                    <IconButton
-                        size="large"
-                        aria-label="account of current user"
-                        aria-controls="menu-appbar"
-                        aria-haspopup="true"
-                        onClick={handleOpenNavMenu}
-                        color="inherit"
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Menu
-                        id="menu-appbar"
-                        anchorEl={anchorElNav}
-                        anchorOrigin={{
-                            vertical: 'bottom',
-                            horizontal: 'left',
-                        }}
-                        keepMounted
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'left',
-                        }}
-                        open={Boolean(anchorElNav)}
-                        onClose={handleCloseNavMenu}
-                        sx={{
-                            display: { xs: 'block', md: 'none' },
-                        }}
-                    >
-                        {pages.map((page, index) => (
-                            <MenuItem
-                                key={page}
-                                onPointerEnter={() => handlePrefetch(index)}
-                                onFocus={() => handlePrefetch(index)}
-                                onClick={() => {
-                                    handleCloseNavMenu();
-                                    handlesection(index);
-                                }}
-                            >
-                                <Typography textAlign="center">{page}</Typography>
-                            </MenuItem>
-                        ))}
-                    </Menu>
-                </Box>
+  const handleMobileNavigate = (value) => {
+    handleCloseNavMenu();
+    handlesection(value);
+    scrollToTop();
+  };
 
-                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                    {pages.map((page, index) => (
-                        <Button
-                            key={page}
-                            onMouseEnter={() => handlePrefetch(index)}
-                            onFocus={() => handlePrefetch(index)}
-                            onTouchStart={() => handlePrefetch(index)}
-                            onClick={() => {
-                                handleCloseNavMenu();
-                                handlesection(index);
-                            }}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                            className='navbar-buttons'
-                        >
-                            {page}
-                        </Button>
-                    ))}
-                </Box>
+  const handleDesktopNavigate = (value) => {
+    handleCloseNavMenu();
+    handlesection(value);
+    scrollToTop();
+  };
 
-                
+  return (
+    <AppBar position="static">
+      <Toolbar disableGutters className="navbar">
+        <IconButton sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, ml: 1 }}>
+          <ResponsiveImage
+            data={logoImage}
+            placeholder={logoPlaceholder}
+            alt="Andrea Massignan personal logo"
+            className="navbar-logo"
+            loading="eager"
+            fetchpriority="high"
+            useCdn={false}
+            sizes="64px"
+          />
+        </IconButton>
 
-                <Box sx={{ flexGrow: 0 }}>
-                    <Tooltip title={t('navbar.language')}>
-                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, mr: 2 }} >
-                            <Language selectedLanguage={selectedLanguage} />
-                        </IconButton>
-                    </Tooltip>
-                    <Menu
-                        sx={{ mt: '45px' }}
-                        id="menu-appbar"
-                        anchorEl={anchorElUser}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        keepMounted
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        open={Boolean(anchorElUser)}
-                        onClose={handleCloseUserMenu}
-                    >
-                        {settings.map((setting) => (
-                            <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
-                                {setting.flag}
-                                <Typography textAlign="center"
-                                    onClick={() => {
-                                        setLanguage(setting.value);
-                                        changeLanguage(setting.value);
-                                    }}
-                                >{setting.name}</Typography>
-                            </MenuItem>
-                        ))}
-                    </Menu>
-                </Box>
-            </Toolbar>
-        </AppBar>
-    );
+        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{
+              display: { xs: 'block', md: 'none' },
+            }}
+          >
+            {pages.map((page, index) => (
+              <MenuItem
+                key={page}
+                onPointerEnter={() => handlePrefetch(index)}
+                onFocus={() => handlePrefetch(index)}
+                onClick={() => handleMobileNavigate(index)}
+              >
+                <Typography textAlign="center">{page}</Typography>
+              </MenuItem>
+            ))}
+          </Menu>
+        </Box>
+
+        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          {pages.map((page, index) => (
+            <Button
+              key={page}
+              onMouseEnter={() => handlePrefetch(index)}
+              onFocus={() => handlePrefetch(index)}
+              onTouchStart={() => handlePrefetch(index)}
+              onClick={() => handleDesktopNavigate(index)}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              className="navbar-buttons"
+            >
+              {page}
+            </Button>
+          ))}
+        </Box>
+
+        <Box sx={{ flexGrow: 0 }}>
+          <Tooltip title={t('navbar.language')}>
+            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, mr: 2 }}>
+              <Language selectedLanguage={selectedLanguage} />
+            </IconButton>
+          </Tooltip>
+          <Menu
+            sx={{ mt: '45px' }}
+            id="menu-appbar"
+            anchorEl={anchorElUser}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={Boolean(anchorElUser)}
+            onClose={handleCloseUserMenu}
+          >
+            {settings.map((setting) => (
+              <MenuItem key={setting.name} onClick={handleCloseUserMenu}>
+                {setting.flag}
+                <Typography
+                  textAlign="center"
+                  onClick={() => {
+                    setLanguage(setting.value);
+                    changeLanguage(setting.value);
+                  }}
+                >
+                  {setting.name}
+                </Typography>
+              </MenuItem>
+            ))}
+          </Menu>
+        </Box>
+      </Toolbar>
+    </AppBar>
+  );
 };
 
 export default Navbar;

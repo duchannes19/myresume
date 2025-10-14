@@ -35,6 +35,16 @@ import iotThumb from '../images/iot1.png?w=360&as=metadata&imagetools'
 import mlLarge from '../images/ml1.avif?w=1280&as=metadata&imagetools'
 import mlThumb from '../images/ml1.avif?w=360&as=metadata&imagetools'
 
+import hciwLarge from '../images/hciw1.png?w=1280&as=metadata&imagetools'
+import hciwThumb from '../images/hciw1.png?w=360&as=metadata&imagetools'
+
+import deeplLarge1 from '../images/deepl1.png?w=1440&as=metadata&imagetools'
+import deeplThumb1 from '../images/deepl1.png?w=360&as=metadata&imagetools'
+import deeplLarge2 from '../images/deepl2.png?w=1440&as=metadata&imagetools'
+import deeplThumb2 from '../images/deepl2.png?w=360&as=metadata&imagetools'
+import deeplLarge3 from '../images/deepl3.png?w=1440&as=metadata&imagetools'
+import deeplThumb3 from '../images/deepl3.png?w=360&as=metadata&imagetools'
+
 const buildGalleryEntry = (large, thumb, alt) => ({
   large,
   thumb,
@@ -76,5 +86,15 @@ export const projectGalleries = {
   },
   ml: {
     gallery: [buildGalleryEntry(mlLarge, mlThumb, 'Machine learning climate insights')],
+  },
+  hciw: {
+    gallery: [buildGalleryEntry(hciwLarge, hciwThumb, 'Gym Tracker workout live feedback screen')],
+  },
+  deepl: {
+    gallery: [
+      buildGalleryEntry(deeplLarge1, deeplThumb1, 'Audio Restoration Studio degradation controls'),
+      buildGalleryEntry(deeplLarge2, deeplThumb2, 'Audio Restoration Studio comparison view'),
+      buildGalleryEntry(deeplLarge3, deeplThumb3, 'Audio Restoration Studio UNet training dashboard'),
+    ],
   },
 }

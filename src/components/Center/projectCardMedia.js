@@ -19,6 +19,12 @@ import iotCardPlaceholder from '../images/iot1.png?w=24&blur=35&q=45&as=base64&i
 import mlCard from '../images/ml1.avif?w=320;640;960&as=picture&imagetools'
 import mlCardPlaceholder from '../images/ml1.avif?w=24&blur=35&q=45&as=base64&imagetools'
 
+import gymTrackerCard from '../images/hciw1.png?w=320;640;960&as=picture&imagetools'
+import gymTrackerCardPlaceholder from '../images/hciw1.png?w=24&blur=35&q=45&as=base64&imagetools'
+
+import deeplCard from '../images/deepl.png?w=320;640;960&as=picture&imagetools'
+import deeplCardPlaceholder from '../images/deepl.png?w=24&blur=35&q=45&as=base64&imagetools'
+
 export const projectCardMedia = {
   cipensaele: {
     picture: cipensaeleCard,
@@ -54,5 +60,15 @@ export const projectCardMedia = {
     picture: mlCard,
     placeholder: mlCardPlaceholder,
     alt: 'Machine learning climate analysis output',
+  },
+  gymtracker: {
+    picture: gymTrackerCard,
+    placeholder: gymTrackerCardPlaceholder,
+    alt: 'Gym Tracker mobile workout overview',
+  },
+  deepl: {
+    picture: deeplCard,
+    placeholder: deeplCardPlaceholder,
+    alt: 'Audio Restoration Studio interface mockup',
   },
 }
