@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Andrea Massignan - Curriculum Vitae
+% One-Page Professional CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[scale=0.92]{geometry}
+\geometry{top=1cm, bottom=1cm, left=1.2cm, right=1.2cm}
+
+\usepackage{enumitem}
+\setlist{leftmargin=*, nosep, topsep=0pt, partopsep=0pt}
+
+% Reduce vertical spacing
+\setlength{\hintscolumnwidth}{2.5cm}
+\renewcommand*{\sectionfont}{\Large\bfseries\upshape}
+
+% Personal data
+\name{Andrea}{Massignan}
+\title{Computer Scientist}
+\phone[mobile]{+39~340~717~6040}
+\email{mail@andreamassignan.xyz}
+\homepage{andreamassignan.xyz}
+\social[linkedin]{andrea-massignan-4bab3b270}
+\social[github]{duchannes19}
+
+\begin{document}
+
+\vspace*{-0.8cm}
+\makecvtitle
+\vspace{-1cm}
+
+\section{Education}
+\cventry{2023--Present}{M.Sc.\ in Computer Science}{Sapienza University of Rome}{Italy}{}{Focus: Machine Learning, Deep Learning, Computer Vision, IoT Systems}
+\cventry{2019--2023}{B.Sc.\ in Computer Engineering}{Sapienza University of Rome}{Italy}{\textit{Ingegneria Informatica}}{Thesis: Web-based game interface and virtual environment design}
+
+\section{Technical Skills}
+\cvitem{Languages}{Python, JavaScript, PHP, C/C++, Solidity, SQL, HTML/CSS}
+\cvitem{Frontend}{React, React Native, Vite.js, Material-UI}
+\cvitem{Backend}{Node.js, Express, Flask, REST APIs}
+\cvitem{AI/ML}{TensorFlow, PyTorch, CNN, U-Net, Computer Vision, Audio Processing}
+\cvitem{Databases}{PostgreSQL, MySQL}
+\cvitem{Blockchain}{Ethereum, Smart Contracts, Web3, DApp Development}
+\cvitem{IoT}{ROS, Gazebo, ESP32, Arduino}
+\cvitem{Tools}{Git, Docker, Photoshop, Premiere Pro, Audition}
+
+\section{Selected Projects}
+
+\cventry{}{P-Segmentation -- Medical Image Analysis}{}{Python, U-Net, CNN, Vite.js}{}{%
+Developed automatic prostate cancer segmentation system for MRI/CT images using an ensemble of three U-Net models trained on multiple datasets, achieving improved accuracy through model combination.}
+
+\cventry{}{Audio Restoration Studio}{}{Python, Gradio, MusicGen, Demucs, U-Net}{}{%
+Built a Gradio-based workflow for stress-testing generative audio models, implementing degradation and restoration pipelines with custom-trained neural networks for denoising research.}
+
+\cventry{}{Angel -- URL Security Analyzer}{}{Chrome Extension, Flask, CNN}{}{%
+Created a Chrome extension with CNN-powered backend for real-time URL security analysis, intercepting browser requests and providing instant threat assessments to users.}
+
+\cventry{}{4Ever -- NFT DApp}{}{Ethereum, Solidity, React, Web3}{}{%
+Developed a decentralized application on Ethereum for NFT management, featuring smart contracts for secure transactions, a marketplace, and a gamified quest reward system.}
+
+\cventry{}{Gym Tracker -- IoT Fitness App}{}{React Native, ESP32, Arduino, Python}{}{%
+Built cross-platform mobile app paired with ESP32 sensors for real-time workout tracking, posture analysis, and form correction with custom Arduino firmware and data visualization tools.}
+
+\cventry{}{Ci Pensa Ele -- Scheduling System}{}{React, Node.js, Express, PostgreSQL}{}{%
+Full-stack calendar application with appointment scheduling, reservation management, authentication, caching optimization, and encrypted data storage.}
+
+\section{Languages}
+\cvitem{}{Italian (Native) \hspace{1cm} English (Fluent -- Professional proficiency)}
+
+\vspace{0.3cm}
+\begin{center}
+\small\textit{I authorize the processing of my personal data pursuant to art.\ 13 GDPR 679/16.}
+\end{center}
+
+\end{document}

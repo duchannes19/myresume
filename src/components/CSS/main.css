@@ -409,3 +409,80 @@ body {
         animation: none !important;
     }
 }
+
+/* Skills Section - Professional Tag Layout */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 50rem;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+}
+
+.skill-category {
+    background: linear-gradient(135deg, rgba(21, 23, 60, 0.6) 0%, rgba(35, 22, 34, 0.6) 100%);
+    border: 1px solid rgba(45, 218, 186, 0.3);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    border-color: var(--turquoise);
+    box-shadow: 0 0 20px rgba(45, 218, 186, 0.15);
+    transform: translateY(-2px);
+}
+
+.skill-category-title {
+    color: var(--old-gold);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 0.75rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(202, 183, 30, 0.3);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: rgba(45, 218, 186, 0.1);
+    border: 1px solid rgba(45, 218, 186, 0.4);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: rgba(45, 218, 186, 0.25);
+    border-color: var(--turquoise);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .skill-category {
+        padding: 1rem;
+    }
+
+    .skill-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+}

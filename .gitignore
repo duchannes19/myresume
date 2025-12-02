@@ -11,6 +11,13 @@ node_modules
 dist
 dist-ssr
 *.local
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.sync
+*.synctex.gz
 
 # Editor directories and files
 .vscode/*
