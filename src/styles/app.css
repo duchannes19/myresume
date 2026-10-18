@@ -350,6 +350,59 @@ main:focus {
   color: var(--signal);
 }
 
+/* Reply mark: draws its body outline, fills in, then the head drops into place (once). */
+.reply-logo {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  margin-inline-start: 0.45em;
+  vertical-align: -0.2em;
+  overflow: visible;
+}
+
+.reply-logo__body,
+.reply-logo__head {
+  fill: var(--reply-blue);
+}
+
+.reply-logo__body {
+  stroke: var(--reply-blue);
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reply-logo__body {
+    stroke-dasharray: 1;
+    animation:
+      reply-draw 1100ms var(--ease-out) 300ms both,
+      reply-fill 500ms var(--ease-out) 1100ms both;
+  }
+
+  .reply-logo__head {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: reply-head-drop 650ms var(--ease-out) 1400ms both;
+  }
+}
+
+@keyframes reply-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes reply-fill {
+  from { fill-opacity: 0; }
+  to { fill-opacity: 1; }
+}
+
+@keyframes reply-head-drop {
+  0% { opacity: 0; transform: translateY(-160%) scale(0.6); }
+  55% { opacity: 1; transform: translateY(12%) scale(1.08, 0.9); }
+  80% { transform: translateY(-6%) scale(0.97, 1.03); }
+  100% { opacity: 1; transform: none; }
+}
+
 .hero__intro {
   max-width: 40ch;
   margin-top: var(--space-s);
@@ -1094,7 +1147,7 @@ main:focus {
   }
 
   .hero__plate {
-    justify-self: start;
+    justify-self: center;
     width: min(100%, 13rem);
     padding: var(--space-s);
   }

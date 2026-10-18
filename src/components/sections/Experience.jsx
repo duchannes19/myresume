@@ -1,8 +1,9 @@
 import { Trans, useTranslation } from 'react-i18next'
 import { projectHref } from '../../hooks/useHashRoute'
+import ReplyLogo from '../ReplyLogo'
 
 const entries = [
-  { id: 'consultant', group: 'work', current: true },
+  { id: 'consultant', group: 'work', current: true, logo: true },
   { id: 'msc', group: 'education' },
   { id: 'bsc', group: 'education', project: 'dohr' },
 ]
@@ -16,7 +17,7 @@ function Experience() {
         <h2 id="experience-title" className="section__title">{t('experience.title')}</h2>
 
         <ol className="timeline">
-          {entries.map(({ id, group, current, project }) => (
+          {entries.map(({ id, group, current, project, logo }) => (
             <li key={id} className="timeline__item">
               <p className="timeline__meta">
                 {current ? (
@@ -28,7 +29,10 @@ function Experience() {
               </p>
               <div className="timeline__body">
                 <h3 className="timeline__role">{t(`experience.${id}.role`)}</h3>
-                <p className="timeline__org">{t(`experience.${id}.org`)}</p>
+                <p className="timeline__org">
+                  {t(`experience.${id}.org`)}
+                  {logo && <ReplyLogo />}
+                </p>
                 {id !== 'consultant' && (
                   <p className="timeline__note">
                     <Trans i18nKey={`experience.${id}.thesis`} components={{ i: <i /> }} />

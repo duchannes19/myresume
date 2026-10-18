@@ -21,6 +21,7 @@
   --gold: #cab71e;           /* reserved: primary action + current location */
   --gold-hi: #e0cc33;
   --on-gold: #0b0d24;
+  --reply-blue: #3d8bff;     /* Reply mark next to the employer name */
 
   --rule: rgb(45 218 186 / 0.13);
   --focus: var(--signal);

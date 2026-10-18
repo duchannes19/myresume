@@ -1,6 +1,7 @@
 import { Trans, useTranslation } from 'react-i18next'
 import DecodeText from '../DecodeText'
 import Icon from '../Icon'
+import ReplyLogo from '../ReplyLogo'
 import { profile, socialLinks } from '../../data/profile'
 import monitorGif from '../images/about.gif'
 
@@ -19,6 +20,7 @@ function Hero() {
           </h1>
           <p className="hero__role">
             <Trans i18nKey="hero.role" components={{ b: <b /> }} />
+            <ReplyLogo />
           </p>
           <p className="hero__intro">{t('hero.intro')}</p>
 
