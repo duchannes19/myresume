@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { imagetools } from 'vite-imagetools'
-import vitePluginSvgo from 'vite-plugin-svgo'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { fileURLToPath, URL } from 'node:url'
 import { Buffer } from 'node:buffer'
@@ -36,43 +35,6 @@ const performanceBudgetPlugin = (budget = PERFORMANCE_BUDGET_BYTES) => ({
   },
 })
 
-const htmlPreloadPlugin = () => ({
-  name: 'vite-html-critical-preload',
-  transformIndexHtml(html) {
-    return {
-      html,
-      tags: [
-        {
-          tag: 'link',
-          injectTo: 'head',
-          attrs: {
-            rel: 'preconnect',
-            href: 'https://fonts.googleapis.com',
-          },
-        },
-        {
-          tag: 'link',
-          injectTo: 'head',
-          attrs: {
-            rel: 'preconnect',
-            href: 'https://fonts.gstatic.com',
-            crossorigin: '',
-          },
-        },
-        {
-          tag: 'link',
-          injectTo: 'head',
-          attrs: {
-            rel: 'preload',
-            as: 'style',
-            href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Akatab&display=swap',
-          },
-        },
-      ],
-    }
-  },
-})
-
 export default defineConfig(({ mode }) => {
   const isAnalyze = mode === 'analyze'
 
@@ -99,13 +61,6 @@ export default defineConfig(({ mode }) => {
           return new URLSearchParams({ format: 'avif;webp;png' })
         },
       }),
-      vitePluginSvgo({
-        svgoConfig: {
-          multipass: true,
-          plugins: [{ name: 'preset-default' }, 'removeDimensions', 'sortAttrs'],
-        },
-      }),
-      htmlPreloadPlugin(),
       performanceBudgetPlugin(),
       isAnalyze &&
         visualizer({
@@ -130,14 +85,16 @@ export default defineConfig(({ mode }) => {
       },
       assetsInlineLimit: 2048,
       chunkSizeWarningLimit: 450,
-      rollupOptions: {
+      rolldownOptions: {
         output: {
-          manualChunks(id) {
-            if (!id.includes('node_modules')) return
-            if (id.includes('@mui')) return 'vendor-mui'
-            if (id.includes('tsparticles')) return 'vendor-particles'
-            if (id.includes('i18next')) return 'vendor-i18n'
-            return 'vendor'
+          // Stable vendor chunks for long-term caching; everything else (e.g. libs
+          // only used by lazy sections) is left to automatic splitting.
+          codeSplitting: {
+            groups: [
+              { name: 'vendor-particles', test: /node_modules[\\/]@tsparticles[\\/]/, priority: 3 },
+              { name: 'vendor-i18n', test: /node_modules[\\/](i18next|react-i18next)[\\/]/, priority: 2 },
+              { name: 'vendor-react', test: /node_modules[\\/](react|react-dom|scheduler)[\\/]/, priority: 1 },
+            ],
           },
           chunkFileNames: 'assets/js/[name]-[hash].js',
           entryFileNames: 'assets/js/[name]-[hash].js',
@@ -156,7 +113,6 @@ export default defineConfig(({ mode }) => {
     },
     optimizeDeps: {
       entries: ['./src/main.jsx'],
-      include: ['@mui/material', '@mui/icons-material', 'i18next', 'react-i18next'],
     },
     server: {
       headers: {
