@@ -1,6 +1,7 @@
 // Skill groups from the CV. `proof` maps a skill to the project slug that demonstrates it.
 export const skillGroups = [
   { id: 'ai', skills: ['PyTorch', 'TensorFlow', 'U-Net', 'CNN', 'Computer Vision'] },
+  { id: 'cloud', skills: ['Kubernetes', 'Helm', 'Terraform', 'Azure DevOps', 'AWS', 'Azure', 'GCP'] },
   { id: 'frontend', skills: ['React', 'React Native', 'Vite.js', 'HTML/CSS'] },
   { id: 'backend', skills: ['Node.js', 'Express', 'Flask', 'REST APIs'] },
   { id: 'languages', skills: ['Python', 'JavaScript', 'PHP', 'C/C++', 'SQL'] },

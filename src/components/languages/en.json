@@ -8,6 +8,7 @@
     "label": "Main",
     "home": "Andrea Massignan, back to top",
     "experience": "Experience",
+    "work": "At work",
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact",
@@ -46,12 +47,32 @@
       "thesisLink": "See the project"
     }
   },
+  "work": {
+    "k8s": {
+      "title": "Kubernetes",
+      "hint": "At Storm Reply",
+      "body": "Day to day I work with Kubernetes, on <b>EKS</b> and <b>GKE</b>.",
+      "diagram": {
+        "title": "Diagram: a Helm rolling update on a Kubernetes cluster",
+        "desc": "Traffic flows from an ingress through a service to pods on three nodes. A helm upgrade replaces the pods node by node until the rollout is complete."
+      }
+    },
+    "cloud": {
+      "title": "Cloud & DevOps",
+      "body": "I work on CI/CD pipelines in <b>Azure DevOps</b> and on infrastructure as code with <b>Terraform</b>, across AWS, Azure and GCP.",
+      "diagram": {
+        "title": "Diagram: an Azure DevOps pipeline deploying to three clouds",
+        "desc": "A git push runs the build, test, terraform plan and terraform apply stages in turn, then the release goes out to AWS, Azure and GCP."
+      }
+    }
+  },
   "skills": {
     "title": "Skills",
     "hint": "Highlighted skills link to a project that uses them.",
     "proof": "{{skill}}: see {{project}}",
     "groups": {
       "ai": "AI & ML",
+      "cloud": "Cloud & DevOps",
       "frontend": "Frontend",
       "backend": "Backend",
       "languages": "Languages",

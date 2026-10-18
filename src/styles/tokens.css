@@ -18,6 +18,7 @@
   --signal: #2ddaba;         /* turquoise: links, tags, focus, particles */
   --signal-dim: rgb(45 218 186 / 0.14);
   --signal-line: rgb(45 218 186 / 0.22);
+  --signal-fill: #122d43;    /* signal-dim flattened onto ink-1: opaque, for diagram states */
   --gold: #cab71e;           /* reserved: primary action + current location */
   --gold-hi: #e0cc33;
   --on-gold: #0b0d24;

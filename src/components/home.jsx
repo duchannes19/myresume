@@ -5,6 +5,7 @@ import ParticlesContainer from './particles'
 import SectionLoading from './SectionLoading'
 import Hero from './sections/Hero'
 import Experience from './sections/Experience'
+import Work from './sections/Work'
 import Skills from './sections/Skills'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
@@ -56,6 +57,7 @@ function Homepage() {
           <>
             <Hero />
             <Experience />
+            <Work />
             <Skills />
             <Projects />
             <Contact />

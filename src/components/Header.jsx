@@ -5,7 +5,7 @@ import Icon from './Icon'
 import ResponsiveImage from './ResponsiveImage'
 import logoImage from './images/logo.png?w=48;96&as=picture&imagetools'
 
-const SECTIONS = ['experience', 'skills', 'projects', 'contact']
+const SECTIONS = ['experience', 'work', 'skills', 'projects', 'contact']
 const LANGUAGES = [
   { code: 'en', label: 'EN', name: 'English' },
   { code: 'it', label: 'IT', name: 'Italiano' },

@@ -576,6 +576,163 @@ main:focus {
   margin: 0;
 }
 
+/* ── At work ───────────────────────────────────────────────────────── */
+.work__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: var(--space-l) var(--space-xl);
+  align-items: center;
+}
+
+.work__area--flip .work__grid {
+  grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+}
+
+.work__area--flip .work__copy {
+  order: 2;
+}
+
+.work__body {
+  max-width: var(--measure);
+  color: var(--text-md);
+}
+
+.work__body b {
+  color: var(--text-hi);
+  font-weight: 600;
+}
+
+.work__tags {
+  margin-top: var(--space-m);
+}
+
+.work__plate {
+  margin: 0;
+  padding: var(--space-m);
+  background: var(--ink-1);
+  border: 1px solid var(--signal-line);
+  border-radius: var(--radius);
+}
+
+/* Diagrams: static defaults are the finished state (rollout done, release
+   deployed); looping Web Animations take over only while on screen. */
+.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  fill: var(--text-md);
+  font-family: var(--font-mono);
+  font-stretch: 87.5%;
+}
+
+.diagram--tall {
+  max-width: 22rem;
+  margin-inline: auto;
+}
+
+.diagram :is(.diagram__frame, .diagram__link, .diagram__box, .diagram__active, .diagram__pod, .diagram__term) {
+  vector-effect: non-scaling-stroke;
+}
+
+.diagram__label,
+.diagram__prompt {
+  fill: var(--text-lo);
+}
+
+.diagram__name {
+  fill: var(--text-hi);
+}
+
+.diagram__frame {
+  fill: none;
+  stroke: var(--rule);
+}
+
+.diagram__link {
+  fill: none;
+  stroke: var(--signal-line);
+}
+
+.diagram__box,
+.diagram__pod {
+  fill: var(--ink-1);
+  stroke: var(--signal-line);
+}
+
+.diagram__box--lit,
+.diagram__pod--next {
+  fill: var(--signal-fill);
+  stroke: var(--signal);
+}
+
+.diagram__pod {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.diagram__active {
+  fill: none;
+  stroke: var(--signal);
+  opacity: 0;
+}
+
+.diagram__packet {
+  fill: none;
+  stroke: var(--signal);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  opacity: 0;
+}
+
+.diagram__progress {
+  fill: var(--signal);
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: 0 50%;
+}
+
+.diagram__term {
+  fill: var(--ink-0);
+  stroke: var(--rule);
+}
+
+.diagram__cover {
+  fill: var(--ink-0);
+  transform: scaleX(0);
+  transform-box: fill-box;
+  transform-origin: 100% 50%;
+}
+
+.diagram__caret {
+  fill: var(--signal);
+  opacity: 0;
+}
+
+.diagram__status {
+  opacity: 0;
+}
+
+.diagram__status--done {
+  fill: var(--signal);
+  opacity: 1;
+}
+
+@media (max-width: 64rem) {
+  .work__grid,
+  .work__area--flip .work__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .work__area--flip .work__copy {
+    order: 0;
+  }
+
+  .work__plate {
+    max-width: 40rem;
+  }
+}
+
 /* ── Projects ──────────────────────────────────────────────────────── */
 .project-group + .project-group {
   margin-top: var(--space-xl);
@@ -1165,6 +1322,10 @@ main:focus {
   .timeline__item,
   .skills__row {
     grid-template-columns: 1fr;
+  }
+
+  .work__plate {
+    padding: var(--space-s);
   }
 
   .timeline__item {
