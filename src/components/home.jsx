@@ -1,36 +1,73 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from './navbar';
-import ParticlesContainer from './particles';
-import Center from './Center/center';
-import { preloadSection } from './Center/sectionRegistry';
-import { I18nextProvider } from 'react-i18next';
-import i18n from './i18n';
-import { Copyright } from './copyright';
+import { Suspense, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import Header from './Header'
+import ParticlesContainer from './particles'
+import SectionLoading from './SectionLoading'
+import Hero from './sections/Hero'
+import Experience from './sections/Experience'
+import Skills from './sections/Skills'
+import Projects from './sections/Projects'
+import Contact from './sections/Contact'
+import { ProjectDetail } from '../routes'
+import { projects } from '../data/projects'
+import { useHashRoute } from '../hooks/useHashRoute'
+
+function useDocumentMeta(route) {
+  const { t, i18n } = useTranslation()
+
+  useEffect(() => {
+    const project = route.view === 'project' ? projects[route.slug] : null
+    document.title = project ? `${project.title} · Andrea Massignan` : t('meta.title')
+    document.querySelector('meta[name="description"]')?.setAttribute('content', t('meta.description'))
+  }, [route.view, route.slug, t, i18n.resolvedLanguage])
+}
+
+// Returning from a project view to an in-page anchor: the target only exists
+// after the one-page view renders, so scroll once it has.
+function useAnchorScroll(route) {
+  useEffect(() => {
+    if (route.view !== 'home' || !route.anchor) return undefined
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(route.anchor)?.scrollIntoView({ block: 'start' })
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [route.view, route.anchor])
+}
 
 function Homepage() {
+  const { t } = useTranslation()
+  const route = useHashRoute()
 
-    const [center, setCenter] = useState(0);
+  useDocumentMeta(route)
+  useAnchorScroll(route)
 
-    useEffect(() => {
-        preloadSection(0);
-    }, []);
+  return (
+    <>
+      <a className="skip-link" href="#content">{t('skip')}</a>
+      <ParticlesContainer />
+      <Header view={route.view} />
 
-    const handleSectionChange = (value) => {
-        setCenter(value);
-        preloadSection(value);
-    };
+      <main id="content" tabIndex={-1}>
+        {route.view === 'project' ? (
+          <Suspense fallback={<SectionLoading />}>
+            <ProjectDetail slug={route.slug} />
+          </Suspense>
+        ) : (
+          <>
+            <Hero />
+            <Experience />
+            <Skills />
+            <Projects />
+            <Contact />
+          </>
+        )}
+      </main>
 
-    return (
-        <div>
-            <ParticlesContainer />
-            <I18nextProvider i18n={i18n}>
-                <Navbar setCenter={handleSectionChange} preloadSection={preloadSection} />
-                <Center value={center} />
-            </I18nextProvider>
+      <footer className="site-footer">
+        <p>{t('footer', { year: new Date().getFullYear() })}</p>
+      </footer>
+    </>
+  )
+}
 
-            <Copyright />
-        </div>
-    );
-};
-
-export default Homepage;
+export default Homepage

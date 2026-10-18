@@ -1,10 +1,14 @@
-import React from 'react'
+import { useTranslation } from 'react-i18next'
 
-const SectionLoading = () => (
-  <div className="section-loading" role="status" aria-live="polite">
-    <span className="section-loading__spinner" aria-hidden="true" />
-    <span className="visually-hidden">Loading section…</span>
-  </div>
-)
+const SectionLoading = () => {
+  const { t } = useTranslation()
+
+  return (
+    <div className="section-loading" role="status">
+      <span className="section-loading__bar" aria-hidden="true" />
+      <span className="visually-hidden">{t('loading')}</span>
+    </div>
+  )
+}
 
 export default SectionLoading

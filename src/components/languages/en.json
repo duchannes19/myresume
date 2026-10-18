@@ -1,55 +1,153 @@
 {
-    "resume.title": "My Resume",
-    "resume.languages.title": "Languages",
-    "resume.languages.description": "<p>I speak <b>English</b> and <b>Italian</b>.</p>",
-    "resume.skills.title": "Skills",
-    "resume.other.title": "Other",
-    "resume.other.description": "<p>I also work my way around with <b>Photoshop</b>, <b>Audition</b>, <b>Premiere</b> and other tools.</p>",
-
-    "navbar.about": "About",
-    "navbar.resume": "Resume",
-    "navbar.contact": "Contacts",
-    "navbar.language": "Change Language",
-    "navbar.italian": "Italian",
-    "navbar.english": "English",
-
-    "about.title": "About Me",
-    "about.description": "<p>Hi, I am <b>Andrea</b>, a full stack developer.</p><p style={{ margin: '1rem' }}>I am a <b>Computer Engineering</b> graduate and have a passion for creating and experimenting with programming languages.</p><p>I want to put my <b>knowledge</b> and <b>skills</b> to contribute to the development of quality software.</p><p>I am <b>motivated</b> to continuously <b>learn</b> and take on complex challenges.</p><p> Currently I am studying <b>Computer Science</b> at the University of <b>Sapienza</b>.</p>",
-    
-    "portfolio.description": "Here are some of my projects:",
-    "portfolio.backbutton": "Back",
-
-    "cipensaele.description": "<p>This application is a web-based calendar and scheduling system that consists of a React frontend and a Node.js backend. The frontend is responsible for rendering the user interface and handling user interactions, while the backend handles the logic and data management.</p><p>The React frontend utilizes components and state management to create a responsive and interactive user interface. It includes features such as displaying a calendar view, scheduling appointments, managing reservations, and generating reports. The frontend communicates with the backend through HTTP requests to fetch and update data.</p><p>On the backend, Node.js is used to build a server-side application that handles the business logic and data operations. It provides APIs for the frontend to interact with, enabling functionalities such as creating, updating, and deleting calendar events, managing user authentication and authorization, and handling various data-related operations. The backend communicates with a database to store and retrieve data securely.</p><p>The application implements various features to enhance user experience and performance. Caching strategies are utilized to optimize data retrieval and minimize server requests. The application also incorporates encryption techniques to secure sensitive data, ensuring confidentiality and integrity.</p><p>The <b>code</b> is hosted on my Github and is private as well as the <b>website</b>.</p>",
-
-    "dohr.description": "The project involves the creation of a website that acts as an online interface for the video game, creating a virtual environment in which players can exchange additional information about the game world and manage their inventory. The interface itself is designed to be simple and intuitive, but at the same time aesthetically consistent with the theme of the video game.",
-    "dohr.d.download": "You can read more by downloading my thesis that I made with my friend and collegue <b>Paolo Saquella</b>.",
-
-    "fourever.description": "The project involves the creation of a DApp that allows users and companies to manage their own NFTs. The DApp is built on the Ethereum blockchain and utilizes smart contracts to manage the creation, ownership, and transfer of NFTs. The DApp provides a user-friendly interface for users to handle and manage NFTs, as well as a marketplace for buying and selling NFTs. The DApp also includes a Quest system that allows users to earn rewards by completing tasks and challenges. The DApp is designed to be secure, scalable, and user-friendly, providing a seamless experience for users to manage NFTs in the context of an online game.",
-    "fourever.d.download": "You can read more by downloading the report that I made with my friend and collegue <b>Cesare Corsi</b>.",
-
-    "angel.description": "The following project is a tool used to analyze URL requests during navigation and evaluate the security of the website based on the predictions of a Convolutional Neural Network. The tool is implemented as a Chrome extension and a Flask server. The extension intercepts requests made by the browser and sends them to the server for analysis. The server uses a model trained by us with a modified dataset to predict the security of the website based on the URL and sends the result back to the extension. The extension then displays the result to the user.",
-    "angel.d.download": "You can read more by downloading the report that I made with my friend and collegue <b>Cesare Corsi</b>.",
-
-    "psegment.description": "This project aims to simplify and support prostate detection through a user-friendly frontend and a Python backend that handles convolutional neural network (CNN) processing. Specifically, it is a Python backend and Vite.js frontend application focused on automatic segmentation of prostate cancer regions in MRI and CT images. The U-Net neural network was trained on two different datasets to obtain an ensemble of three different models that work together to provide the most accurate prediction despite dataset limitations. This work was inspired by the results of 'Recent Automatic Segmentation Algorithms of MRI Prostate Regions: A Review'.",
-    "psegment.d.download": "You can read more by downloading the presentation that I made with my friend and collegue <b>Cesare Corsi</b>.",
-
-    "iot.description": "In this IoT scenario we were presented with a configuration and simulation problem. The goal was re to create a suitable environmnet using Gazebo and ROS (interacted with through Python) in order to obtain what was requested in the project delivery. For this scenario we assume that the balloons are always connected to the base station. The balloons are deployed so that they can collectively guarantee radio coverage to the entire set of mobile sensors. However, the balloons have limited storage capability that they use to provide a proxy caching service to the base station. In this scenario, the base station makes application specific requests on the data produced by the sensors. Balloons have a finite amount of memory storage and cannot store all the data the sensors produce. The balloons should smartly select which part of the sensing data to store in order to meet the requests of the base station.",
-    "iot.d.download": "You can read more by downloading the report that I made with my friends and collegues <b>Cesare Corsi</b> and <b>Kevin Cukaj</b>.",
-
-  "hciw.description": "<p>Gym Tracker is a cross-platform companion built with React Native for the Human–Computer Interaction for the Web course. The app pairs with an ESP32-powered sensor to capture repetitions, check the user posture, and highlight form issues in real time.</p><p>The project also ships Arduino firmware and Python tooling to stream, label, and visualise workouts so athletes can review their sessions from any device.</p>",
-  "hciw.d.download": "You can read more by downloading the design report.",
-
-  "deepl.description": "<p>Audio Restoration Studio is a Gradio workflow that stress tests generative audio models by degrading MusicGen outputs and restoring them with Demucs, S-NMF, and a custom UNet trained on curated datasets.</p><p>The toolkit compares spectrograms, quality metrics, and checkpoints so we could study denoising strategies for deep learning pipelines.</p>",
-  "deepl.d.download": "You can read more by downloading the full documentation.",
-
-    "ml.description": "The following are the two homeworks that were requested to us during our Machine Learning course. I will cite the homeworks descriptions from my written reports.",
-    "ml.firsthw": "The primary objective of this homework is to develop and train neural network models capable of learning the forward kinematics (FK) of robotic manipulators with varying degrees of freedom (DOF), specifically targeting 2, 3, and 5 DOF robotic arms. Forward kinematics involves determining the position and orientation of a robot’s end-effector (EE) based on given joint angles. By training neural networks to approximate the FK function, aiming to create enough accurate models that can predict the EE states for arbitrary joint configurations.",
-    "ml.secondhw": "In this homework assignment, the objective is to address the image classification problem focused on understanding the behavior of a racing car within the OpenAI Gym environment. The task involves classifying 96x96 color images, each corresponding to one of the five distinct actions available for controlling the car.",
-    "ml.d.download": "You can read more by downloading the reports.",
-    
-    "contacts.title": "My Contacts",
-    "contacts.social": "<p>You can find me on</p>",
-    "contacts.mail": "<p>My email is <b>mail@andreamassignan.xyz</b></p>",
-    "contacts.phone": "<p>My phone is <b>+39 3407176040</b></p>"
-
+  "meta": {
+    "title": "Andrea Massignan · Computer Scientist",
+    "description": "Andrea Massignan, Computer Scientist and Consultant at Strom Reply. Machine learning and full-stack projects, CV and contacts."
+  },
+  "skip": "Skip to content",
+  "nav": {
+    "label": "Main",
+    "home": "Andrea Massignan, back to top",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "menu": "Menu",
+    "language": "Language"
+  },
+  "hero": {
+    "role": "Computer Scientist · Consultant at <b>Strom Reply</b>",
+    "intro": "I work across machine learning and full-stack development, building intelligent systems and the software around them.",
+    "cv": "Download CV",
+    "email": "Email me",
+    "gifAlt": "Pixel-art computer monitor with scrolling code"
+  },
+  "experience": {
+    "title": "Experience & education",
+    "current": "Current",
+    "work": "Work",
+    "education": "Education",
+    "languagesTitle": "Languages",
+    "languages": "Italian (native) · English (fluent)",
+    "consultant": {
+      "role": "Consultant",
+      "org": "Strom Reply"
+    },
+    "msc": {
+      "role": "M.Sc. in Computer Science",
+      "org": "Sapienza University of Rome",
+      "meta": "Completed",
+      "thesis": "Thesis: <i>SYRA: Machine Learning-Based Semantic Attestation via System Call Analysis</i>"
+    },
+    "bsc": {
+      "role": "B.Sc. in Computer Engineering",
+      "org": "Sapienza University of Rome",
+      "meta": "2017–2022",
+      "thesis": "Thesis: an online interface connecting role-playing game enthusiasts.",
+      "thesisLink": "See the project"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "hint": "Highlighted skills link to a project that uses them.",
+    "proof": "{{skill}}: see {{project}}",
+    "groups": {
+      "ai": "AI & ML",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "languages": "Languages",
+      "blockchain": "Blockchain",
+      "data": "Databases",
+      "iot": "IoT & embedded",
+      "tools": "Tools"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "groups": {
+      "ai": "AI & machine learning",
+      "web": "Web & apps"
+    },
+    "back": "All projects",
+    "previous": "Previous project",
+    "next": "Next project",
+    "builtWith": "Built with {{names}}",
+    "stack": "Stack",
+    "type": "Type",
+    "downloads": "Downloads",
+    "code": "Code",
+    "privateCode": "Code and website are private.",
+    "notFound": "That project doesn't exist.",
+    "gallery": {
+      "label": "{{project}} screenshots",
+      "previous": "Previous image",
+      "next": "Next image",
+      "position": "Image {{current}} of {{total}}",
+      "open": "Open image full screen",
+      "close": "Close",
+      "show": "Show image {{index}}"
+    }
+  },
+  "downloads": {
+    "report": "Report (PDF)",
+    "presentation": "Presentation (PDF)",
+    "documentation": "Documentation (PDF)",
+    "designReport": "Design report (PDF)",
+    "homework1": "Homework 1 report (PDF)",
+    "homework2": "Homework 2 report (PDF)",
+    "thesisEn": "Thesis, English (PDF)",
+    "thesisIt": "Thesis, Italian (PDF)"
+  },
+  "contact": {
+    "title": "Let's talk",
+    "lead": "Email is the fastest way to reach me.",
+    "elsewhere": "Elsewhere"
+  },
+  "footer": "© {{year}} Andrea Massignan",
+  "loading": "Loading…",
+  "project": {
+    "psegment": {
+      "summary": "Prostate cancer segmentation on MRI and CT scans with an ensemble of three U-Net models.",
+      "description": "<p>This project aims to simplify and support prostate detection through a user-friendly frontend and a Python backend that handles convolutional neural network (CNN) processing. It is a Python backend and Vite.js frontend focused on automatic segmentation of prostate cancer regions in MRI and CT images.</p><p>The U-Net network was trained on two different datasets to obtain an ensemble of three models that work together to give the most accurate prediction despite dataset limitations. The work was inspired by the results of <i>Recent Automatic Segmentation Algorithms of MRI Prostate Regions: A Review</i>.</p>"
+    },
+    "deepl": {
+      "summary": "A Gradio workflow that degrades MusicGen outputs and restores them with Demucs, S-NMF and a custom U-Net.",
+      "description": "<p>Audio Restoration Studio is a Gradio workflow that stress-tests generative audio models by degrading MusicGen outputs and restoring them with Demucs, S-NMF and a custom U-Net trained on curated datasets.</p><p>The toolkit compares spectrograms, quality metrics and checkpoints, so we could study denoising strategies for deep learning pipelines.</p>"
+    },
+    "angel": {
+      "summary": "A Chrome extension with a CNN-powered Flask backend that rates the safety of URLs as you browse.",
+      "description": "<p>Angel analyses URL requests during navigation and evaluates the security of a website from the predictions of a convolutional neural network. It is built as a Chrome extension and a Flask server.</p><p>The extension intercepts the requests made by the browser and sends them to the server, which runs a model we trained on a modified dataset. The prediction goes back to the extension, which shows the result to the user.</p>"
+    },
+    "ml": {
+      "summary": "Neural forward kinematics for 2–5 DOF robot arms, and image classification of racing-car actions in OpenAI Gym.",
+      "description": "<p>The two homeworks of the Machine Learning course. The descriptions below are quoted from my written reports.</p>",
+      "firsthw": {
+        "title": "Homework 1: forward kinematics",
+        "body": "<p>The primary objective is to develop and train neural network models that learn the forward kinematics (FK) of robotic manipulators with 2, 3 and 5 degrees of freedom. Forward kinematics determines the position and orientation of a robot's end-effector from its joint angles; the networks approximate the FK function accurately enough to predict end-effector states for arbitrary joint configurations.</p>"
+      },
+      "secondhw": {
+        "title": "Homework 2: image classification",
+        "body": "<p>The goal is to classify the behaviour of a racing car in the OpenAI Gym environment: 96×96 colour images, each corresponding to one of the five actions available to control the car.</p>"
+      }
+    },
+    "iot": {
+      "summary": "A ROS and Gazebo simulation where balloons cache sensor data to answer a base station's requests.",
+      "description": "<p>An IoT configuration and simulation problem: build a suitable environment with Gazebo and ROS (driven from Python) to meet the project brief.</p><p>Balloons are always connected to the base station and are deployed so that together they guarantee radio coverage for every mobile sensor. Each balloon has limited storage, which it uses to provide a proxy caching service to the base station. Since the balloons cannot store everything the sensors produce, they must choose which data to keep in order to satisfy the base station's application-specific requests.</p>"
+    },
+    "cipensaele": {
+      "summary": "Scheduling and reservation system with a React frontend and a Node.js and Express backend.",
+      "description": "<p>A web-based calendar and scheduling system with a React frontend and a Node.js backend. The frontend renders a calendar view and handles appointments, reservations and reports, talking to the backend over HTTP.</p><p>The backend owns the business logic and data: it exposes APIs to create, update and delete calendar events, manages authentication and authorisation, and stores data securely in a database.</p><p>Caching reduces server requests and speeds up data retrieval, and encryption protects sensitive data to keep it confidential and intact.</p>"
+    },
+    "fourever": {
+      "summary": "An Ethereum DApp to create, trade and earn NFTs through an in-game quest system.",
+      "description": "<p>A DApp that lets users and companies manage their own NFTs. It runs on Ethereum and uses smart contracts to handle the creation, ownership and transfer of NFTs.</p><p>Players get a clear interface to manage their NFTs, a marketplace to buy and sell them, and a quest system that rewards completed tasks and challenges, all in the context of an online game.</p>"
+    },
+    "hciw": {
+      "summary": "A React Native app paired with an ESP32 sensor that counts reps and flags posture issues in real time.",
+      "description": "<p>Gym Tracker is a cross-platform companion built with React Native for the Human–Computer Interaction on the Web course. It pairs with an ESP32-powered sensor to count repetitions, check posture and highlight form issues in real time.</p><p>The project also ships Arduino firmware and Python tooling to stream, label and visualise workouts, so athletes can review their sessions from any device.</p>"
+    },
+    "dohr": {
+      "summary": "A web companion for a role-playing video game, where players share lore and manage their inventory. My B.Sc. thesis.",
+      "description": "<p>A website that acts as an online interface for the video game: a virtual space where players exchange information about the game world and manage their inventory.</p><p>The interface is designed to be simple and intuitive while staying visually consistent with the game's theme.</p>"
+    }
   }
+}

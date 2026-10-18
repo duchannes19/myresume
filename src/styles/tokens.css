@@ -1,0 +1,60 @@
+/* Design tokens: the only place raw colour, type and spacing values live. */
+:root {
+  color-scheme: dark;
+
+  /* Ink: deep navy world, purple shadow from the incumbent identity */
+  --ink-0: #080a1d;          /* page ground */
+  --ink-1: #0e1130;          /* raised surface */
+  --ink-2: #15173c;          /* card / header (incumbent space-cadet) */
+  --ink-3: #1f2250;          /* hover surface */
+  --shade: #231622;          /* purple shadow (incumbent dark-purple) */
+
+  /* Text */
+  --text-hi: #eef0fb;
+  --text-md: #b9bdd8;
+  --text-lo: #8d92b6;
+
+  /* Signal colours */
+  --signal: #2ddaba;         /* turquoise: links, tags, focus, particles */
+  --signal-dim: rgb(45 218 186 / 0.14);
+  --signal-line: rgb(45 218 186 / 0.22);
+  --gold: #cab71e;           /* reserved: primary action + current location */
+  --gold-hi: #e0cc33;
+  --on-gold: #0b0d24;
+
+  --rule: rgb(45 218 186 / 0.13);
+  --focus: var(--signal);
+
+  /* Type */
+  --font-mono: 'Martian Mono Variable', ui-monospace, 'Cascadia Mono', Menlo, monospace;
+  --font-sans: 'Schibsted Grotesk Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.86rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.4vw, 1.4rem);
+  --step-2: clamp(1.45rem, 1.3rem + 0.8vw, 1.9rem);
+  --step-3: clamp(1.9rem, 1.6rem + 1.6vw, 2.8rem);
+  --step-hero: clamp(2.6rem, 1.4rem + 6vw, 6rem);
+
+  /* Space */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-l: 2.25rem;
+  --space-xl: 3.5rem;
+  --space-2xl: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+
+  --gutter: clamp(1rem, 0.5rem + 3vw, 2.5rem);
+  --content: 72rem;
+  --measure: 66ch;
+
+  --radius: 6px;
+  --header-h: 3.75rem;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur: 260ms;
+}

@@ -1,55 +1,153 @@
 {
-    "resume.title": "Il Mio Curriculum",
-    "resume.languages.title": "Linguaggi",
-    "resume.languages.description": "<p>Parlo <b>Inglese</b> ed <b>Italiano</b>.</p>",
-    "resume.skills.title": "Skills",
-    "resume.other.title": "Altro",
-    "resume.other.description": "<p>Lavoro anche con <b>Photoshop</b>, <b>Audition</b>, <b>Premiere</b> ed altro ancora.</p>",
-
-    "navbar.about": "Informazioni",
-    "navbar.resume": "Curriculum",
-    "navbar.contact": "Contatti",
-    "navbar.language": "Cambia Lingua",
-    "navbar.italian": "Italiano",
-    "navbar.english": "Inglese",
-
-    "about.title": "Informazioni",
-    "about.description": "<p>Ciao, sono <b>Andrea</b>, full stack developer.</p><p style={{ margin: '1rem' }}>Sono laureato in <b>Ingegneria Informatica</b> e ho la passione di creare e sperimentare con i linguaggi di programmazione.</p><p>Voglio mettere a disposizione le mie <b>conoscenze</b> e <b>competenze</b> per contribuire allo sviluppo di software di qualità.</p><p>Sono <b>motivato</b> a <b>imparare</b> continuamente e ad affrontare sfide complesse.</p><p> Al momento sto studiando <b>Computer Science</b> all'università <b>La Sapienza</b>.</p>",
-
-    "portfolio.description": "Alcuni dei miei progetti:",
-    "portfolio.backbutton": "Indietro",
-
-    "cipensaele.description": "<p>Questa applicazione è un sistema di calendario e pianificazione basato sul web che consiste in un frontend React e un backend Node.js. Il frontend è responsabile del rendering dell'interfaccia utente e della gestione delle interazioni utente, mentre il backend si occupa della logica e della gestione dei dati.</p><p>Il frontend React utilizza componenti e gestione dello stato per creare un'interfaccia utente responsive e interattiva. Include funzionalità come la visualizzazione di una vista calendario, la pianificazione di appuntamenti, la gestione delle prenotazioni e la generazione di report. Il frontend comunica con il backend tramite richieste HTTP per recuperare e aggiornare i dati.</p><p>Nel backend, viene utilizzato Node.js per creare un'applicazione lato server che gestisce la logica di business e le operazioni sui dati. Fornisce API per consentire al frontend di interagire, abilitando funzionalità come la creazione, l'aggiornamento e l'eliminazione di eventi nel calendario, la gestione dell'autenticazione e dell'autorizzazione degli utenti e la gestione di varie operazioni relative ai dati. Il backend comunica con un database per archiviare e recuperare i dati in modo sicuro.</p><p>L'applicazione implementa varie funzionalità per migliorare l'esperienza utente e le prestazioni. Vengono utilizzate strategie di caching per ottimizzare il recupero dei dati e ridurre le richieste al server. L'applicazione incorpora anche tecniche di crittografia per proteggere i dati sensibili, garantendo riservatezza e integrità.</p><p>Il <b>codice</b> è ospitato sul mio Github ed è privato, come il <b>sito</b> web.</p>",
-
-    "dohr.description": "Il progetto prevede la creazione di un sito web che agisca come interfaccia online per il videogioco, creando un ambiente virtuale nel quale i giocatori possono scambiarsi informazioni aggiuntive sul mondo di gioco e poter gestire il proprio inventario. L'interfaccia stessa è stata progettata per essere semplice e intuitiva, ma allo stesso tempo esteticamente coerente con il tema del videogioco.",
-    "dohr.d.download": "Puoi leggerne di più scaricando la mia tesi che ho realizzato con il mio amico e collega <b>Paolo Saquella</b>.",
-
-    "fourever.description": "Il progetto prevede la creazione di una DApp che consente a utenti e aziende di gestire i propri NFT. La DApp è costruita sulla blockchain di Ethereum e utilizza contratti intelligenti per gestire la creazione, la proprietà e il trasferimento degli NFT. La DApp fornisce agli utenti un'interfaccia facile da usare per gestire gli NFT e un mercato per l'acquisto e la vendita di NFT. La DApp include anche un sistema di missioni che consente agli utenti di guadagnare ricompense completando compiti e sfide. La DApp è stata progettata per essere sicura, scalabile e facile da usare, fornendo agli utenti un'esperienza senza soluzione di continuità nella gestione degli NFT nel contesto di un gioco online.",
-    "fourever.d.download": "Puoi leggerne di più scaricando il report che ho realizzato con il mio amico e collega <b>Cesare Corsi</b>.",
-
-    "angel.description" : "Il seguente progetto è uno strumento utilizzato per analizzare le richieste di URL durante la navigazione e valutare la sicurezza del sito web in base alle previsioni di una rete neurale convoluzionale. Lo strumento è implementato come un'estensione di Chrome e un server Flask. L'estensione intercetta le richieste effettuate dal browser e le invia al server per l'analisi. Il server utilizza un modello addestrato da noi con un set di dati modificato per prevedere la sicurezza del sito web in base all'URL e invia il risultato all'estensione. L'estensione visualizza quindi il risultato all'utente.",
-    "angel.d.download": "Puoi leggerne di più scaricando il report che ho realizzato con il mio amico e collega <b>Cesare Corsi</b>.",
-
-    "psegment.description": "Questo progetto mira a semplificare e supportare il rilevamento della prostata attraverso un frontend di facile utilizzo e un backend Python che gestisce l'elaborazione della rete neurale convoluzionale (CNN). Nello specifico, si tratta di un backend Python e di un'applicazione frontend Vite.js incentrata sulla segmentazione automatica di regioni tumorali della prostata in immagini MRI e CT. La rete neurale U-Net è stata addestrata su due diversi datasets per ottenere un ensemble di tre diversi modelli che lavorano insieme per fornire la previsione più accurata nonostante le limitazioni dei datasets stessi. Questo lavoro è stato ispirato dai risultati di 'Recent Automatic Segmentation Algorithms of MRI Prostate Regions: A Review'.",
-    "psegment.d.download": "Puoi leggerne di più scaricando la presentazione che ho realizzato con il mio amico e collega <b>Cesare Corsi</b>.",
-
-    "iot.description": "In questo scenario IoT ci è stato presentato un problema di configurazione e simulazione. L'obiettivo era quello di creare un ambiente adatto utilizzando Gazebo e ROS (interagendo con Python) per ottenere quanto richiesto nella consegna del progetto. Per questo scenario si assume che i palloni siano sempre connessi alla stazione base. I palloni sono distribuiti in modo da garantire collettivamente la copertura radio all'intero insieme di sensori mobili. Tuttavia, i palloni hanno una capacità di memorizzazione limitata che utilizzano per fornire un servizio di proxy caching alla stazione base. In questo scenario, la stazione base effettua richieste specifiche sui dati prodotti dai sensori. I palloni hanno una quantità limitata di memoria e non possono memorizzare tutti i dati prodotti dai sensori. I palloni devono selezionare in modo intelligente quale parte dei dati di rilevamento memorizzare per soddisfare le richieste della stazione base.",
-    "iot.d.download": "Puoi leggerne di più scaricando il report che ho realizzato con i miei amici e colleghi <b>Cesare Corsi</b> e <b>Kevin Cukaj</b>.",
-
-  "hciw.description": "<p>Gym Tracker e' un'applicazione multipiattaforma sviluppata con React Native per il corso di Human-Computer Interaction for the Web. L'app si collega a un sensore basato su ESP32 per rilevare le ripetizioni, controllare la postura dell'utente e segnalare in tempo reale eventuali errori di esecuzione.</p><p>Il progetto include anche firmware Arduino e strumenti Python per trasmettere, etichettare e visualizzare gli allenamenti, cosi' da poterli rivedere da qualsiasi dispositivo.</p>",
-  "hciw.d.download": "Puoi approfondire scaricando la relazione di progetto.",
-
-  "deepl.description": "<p>Audio Restoration Studio e' un flusso Gradio che mette alla prova i modelli audio generativi degradando automaticamente le tracce prodotte da MusicGen e ripristinandole con Demucs, S-NMF e una UNet personalizzata addestrata su dataset curati.</p><p>Il toolkit confronta spettrogrammi, metriche di qualita' e checkpoint per studiare strategie di denoising nei modelli di deep learning.</p>",
-  "deepl.d.download": "Puoi leggerne di piu' scaricando la documentazione completa.",
-
-    "ml.description": "Di seguito sono riportati i due homeworks che ci sono stati richiesti durante il corso di Machine Learning. Citerò le descrizioni dei compiti dalle mie relazioni scritte.",
-    "ml.firsthw": "L'obiettivo primario di questo homework è sviluppare e addestrare modelli di reti neurali in grado di apprendere la cinematica anteriore (FK) di manipolatori robotici con vari gradi di libertà (DOF), in particolare di bracci robotici a 2, 3 e 5 DOF. La cinematica anteriore consiste nel determinare la posizione e l'orientamento dell'end-effector (EE) di un robot in base a determinati angoli delle articolazioni. L'addestramento di reti neurali per approssimare la funzione FK mira a creare modelli sufficientemente accurati in grado di prevedere gli stati dell'EE per configurazioni articolari arbitrarie.",
-    "ml.secondhw": "In questo compito a casa, l'obiettivo è quello di affrontare un problema di classificazione delle immagini incentrato sulla comprensione del comportamento di un'auto da corsa all'interno dell'ambiente OpenAI Gym. Il compito prevede la classificazione di 96x96 immagini a colori, ciascuna corrispondente a una delle cinque azioni distinte disponibili per controllare l'auto.",
-    "ml.d.download": "Puoi leggerne di più scaricandone i report.",
-
-    "contacts.title": "I Miei Contatti",
-    "contacts.social": "<p>Mi trovi su</p>",
-    "contacts.mail": "<p>La mia email è <b>mail@andreamassignan.xyz</b></p>",
-    "contacts.phone": "<p>Il mio numero è <b>+39 3407176040</b></p>"
-    
+  "meta": {
+    "title": "Andrea Massignan · Computer Scientist",
+    "description": "Andrea Massignan, Computer Scientist e Consultant in Strom Reply. Progetti di machine learning e full-stack, CV e contatti."
+  },
+  "skip": "Vai al contenuto",
+  "nav": {
+    "label": "Principale",
+    "home": "Andrea Massignan, torna all'inizio",
+    "experience": "Esperienza",
+    "skills": "Competenze",
+    "projects": "Progetti",
+    "contact": "Contatti",
+    "menu": "Menu",
+    "language": "Lingua"
+  },
+  "hero": {
+    "role": "Computer Scientist · Consultant in <b>Strom Reply</b>",
+    "intro": "Lavoro tra machine learning e sviluppo full-stack, realizzando sistemi intelligenti e il software che li circonda.",
+    "cv": "Scarica il CV",
+    "email": "Scrivimi",
+    "gifAlt": "Monitor in pixel art con codice che scorre"
+  },
+  "experience": {
+    "title": "Esperienza e formazione",
+    "current": "Attuale",
+    "work": "Lavoro",
+    "education": "Formazione",
+    "languagesTitle": "Lingue",
+    "languages": "Italiano (madrelingua) · Inglese (fluente)",
+    "consultant": {
+      "role": "Consultant",
+      "org": "Strom Reply"
+    },
+    "msc": {
+      "role": "Laurea Magistrale in Computer Science",
+      "org": "Sapienza Università di Roma",
+      "meta": "Conclusa",
+      "thesis": "Tesi: <i>SYRA: Machine Learning-Based Semantic Attestation via System Call Analysis</i>"
+    },
+    "bsc": {
+      "role": "Laurea Triennale in Ingegneria Informatica",
+      "org": "Sapienza Università di Roma",
+      "meta": "2017–2022",
+      "thesis": "Tesi: realizzazione di un'interfaccia online per connettere gli appassionati di gioco di ruolo.",
+      "thesisLink": "Vedi il progetto"
+    }
+  },
+  "skills": {
+    "title": "Competenze",
+    "hint": "Le competenze evidenziate portano a un progetto che le usa.",
+    "proof": "{{skill}}: vedi {{project}}",
+    "groups": {
+      "ai": "AI e ML",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "languages": "Linguaggi",
+      "blockchain": "Blockchain",
+      "data": "Database",
+      "iot": "IoT ed embedded",
+      "tools": "Strumenti"
+    }
+  },
+  "projects": {
+    "title": "Progetti",
+    "groups": {
+      "ai": "AI e machine learning",
+      "web": "Web e app"
+    },
+    "back": "Tutti i progetti",
+    "previous": "Progetto precedente",
+    "next": "Progetto successivo",
+    "builtWith": "Realizzato con {{names}}",
+    "stack": "Stack",
+    "type": "Tipo",
+    "downloads": "Download",
+    "code": "Codice",
+    "privateCode": "Il codice e il sito sono privati.",
+    "notFound": "Questo progetto non esiste.",
+    "gallery": {
+      "label": "Screenshot di {{project}}",
+      "previous": "Immagine precedente",
+      "next": "Immagine successiva",
+      "position": "Immagine {{current}} di {{total}}",
+      "open": "Apri l'immagine a schermo intero",
+      "close": "Chiudi",
+      "show": "Mostra immagine {{index}}"
+    }
+  },
+  "downloads": {
+    "report": "Report (PDF)",
+    "presentation": "Presentazione (PDF)",
+    "documentation": "Documentazione (PDF)",
+    "designReport": "Relazione di progetto (PDF)",
+    "homework1": "Report homework 1 (PDF)",
+    "homework2": "Report homework 2 (PDF)",
+    "thesisEn": "Tesi, inglese (PDF)",
+    "thesisIt": "Tesi, italiano (PDF)"
+  },
+  "contact": {
+    "title": "Parliamone",
+    "lead": "L'email è il modo più rapido per raggiungermi.",
+    "elsewhere": "Altrove"
+  },
+  "footer": "© {{year}} Andrea Massignan",
+  "loading": "Caricamento…",
+  "project": {
+    "psegment": {
+      "summary": "Segmentazione del tumore alla prostata su immagini MRI e CT con un ensemble di tre modelli U-Net.",
+      "description": "<p>Il progetto mira a semplificare e supportare il rilevamento della prostata attraverso un frontend di facile utilizzo e un backend Python che gestisce l'elaborazione della rete neurale convoluzionale (CNN). Si tratta di un backend Python e di un frontend Vite.js dedicati alla segmentazione automatica delle regioni tumorali della prostata in immagini MRI e CT.</p><p>La rete U-Net è stata addestrata su due dataset diversi per ottenere un ensemble di tre modelli che lavorano insieme e forniscono la previsione più accurata nonostante i limiti dei dataset. Il lavoro è ispirato ai risultati di <i>Recent Automatic Segmentation Algorithms of MRI Prostate Regions: A Review</i>.</p>"
+    },
+    "deepl": {
+      "summary": "Un flusso Gradio che degrada le tracce di MusicGen e le ripristina con Demucs, S-NMF e una U-Net personalizzata.",
+      "description": "<p>Audio Restoration Studio è un flusso Gradio che mette alla prova i modelli audio generativi degradando le tracce prodotte da MusicGen e ripristinandole con Demucs, S-NMF e una U-Net personalizzata addestrata su dataset curati.</p><p>Il toolkit confronta spettrogrammi, metriche di qualità e checkpoint per studiare strategie di denoising nelle pipeline di deep learning.</p>"
+    },
+    "angel": {
+      "summary": "Un'estensione Chrome con backend Flask basato su CNN che valuta la sicurezza degli URL durante la navigazione.",
+      "description": "<p>Angel analizza le richieste di URL durante la navigazione e valuta la sicurezza di un sito web in base alle previsioni di una rete neurale convoluzionale. È composto da un'estensione Chrome e da un server Flask.</p><p>L'estensione intercetta le richieste del browser e le invia al server, che usa un modello addestrato da noi su un dataset modificato. La previsione torna all'estensione, che mostra il risultato all'utente.</p>"
+    },
+    "ml": {
+      "summary": "Cinematica diretta con reti neurali per bracci robotici da 2 a 5 DOF e classificazione delle azioni di un'auto in OpenAI Gym.",
+      "description": "<p>I due homework del corso di Machine Learning. Le descrizioni qui sotto sono citate dalle mie relazioni.</p>",
+      "firsthw": {
+        "title": "Homework 1: cinematica diretta",
+        "body": "<p>L'obiettivo è sviluppare e addestrare reti neurali in grado di apprendere la cinematica diretta (FK) di manipolatori robotici con 2, 3 e 5 gradi di libertà. La cinematica diretta determina posizione e orientamento dell'end-effector a partire dagli angoli delle articolazioni; le reti approssimano la funzione FK con precisione sufficiente a prevedere lo stato dell'end-effector per configurazioni arbitrarie.</p>"
+      },
+      "secondhw": {
+        "title": "Homework 2: classificazione di immagini",
+        "body": "<p>L'obiettivo è classificare il comportamento di un'auto da corsa nell'ambiente OpenAI Gym: immagini a colori 96×96, ciascuna corrispondente a una delle cinque azioni disponibili per controllare l'auto.</p>"
+      }
+    },
+    "iot": {
+      "summary": "Una simulazione ROS e Gazebo in cui dei palloni memorizzano i dati dei sensori per rispondere alle richieste di una stazione base.",
+      "description": "<p>Un problema IoT di configurazione e simulazione: creare un ambiente adatto con Gazebo e ROS (gestiti da Python) per soddisfare i requisiti del progetto.</p><p>I palloni sono sempre connessi alla stazione base e sono distribuiti in modo da garantire insieme la copertura radio di tutti i sensori mobili. Ogni pallone ha una memoria limitata, che usa per offrire un servizio di proxy caching alla stazione base. Non potendo memorizzare tutti i dati prodotti dai sensori, i palloni devono scegliere quali conservare per soddisfare le richieste specifiche della stazione base.</p>"
+    },
+    "cipensaele": {
+      "summary": "Sistema di pianificazione e prenotazioni con frontend React e backend Node.js ed Express.",
+      "description": "<p>Un sistema web di calendario e pianificazione con frontend React e backend Node.js. Il frontend mostra il calendario e gestisce appuntamenti, prenotazioni e report, comunicando con il backend tramite HTTP.</p><p>Il backend gestisce la logica di business e i dati: espone API per creare, aggiornare ed eliminare eventi, gestisce autenticazione e autorizzazione e archivia i dati in modo sicuro in un database.</p><p>Il caching riduce le richieste al server e velocizza il recupero dei dati, e la crittografia protegge i dati sensibili garantendone riservatezza e integrità.</p>"
+    },
+    "fourever": {
+      "summary": "Una DApp su Ethereum per creare, scambiare e guadagnare NFT attraverso un sistema di missioni di gioco.",
+      "description": "<p>Una DApp che consente a utenti e aziende di gestire i propri NFT. Funziona su Ethereum e usa smart contract per gestire creazione, proprietà e trasferimento degli NFT.</p><p>I giocatori hanno un'interfaccia chiara per gestire i propri NFT, un marketplace per comprarli e venderli e un sistema di missioni che premia compiti e sfide completati, il tutto nel contesto di un gioco online.</p>"
+    },
+    "hciw": {
+      "summary": "Un'app React Native collegata a un sensore ESP32 che conta le ripetizioni e segnala gli errori di postura in tempo reale.",
+      "description": "<p>Gym Tracker è un'applicazione multipiattaforma sviluppata con React Native per il corso di Human–Computer Interaction on the Web. Si collega a un sensore basato su ESP32 per contare le ripetizioni, controllare la postura e segnalare in tempo reale gli errori di esecuzione.</p><p>Il progetto include anche firmware Arduino e strumenti Python per trasmettere, etichettare e visualizzare gli allenamenti, così da poterli rivedere da qualsiasi dispositivo.</p>"
+    },
+    "dohr": {
+      "summary": "Un'interfaccia web per un videogioco di ruolo, dove i giocatori condividono informazioni e gestiscono l'inventario. La mia tesi triennale.",
+      "description": "<p>Un sito web che funge da interfaccia online per il videogioco: uno spazio virtuale in cui i giocatori si scambiano informazioni sul mondo di gioco e gestiscono il proprio inventario.</p><p>L'interfaccia è progettata per essere semplice e intuitiva e, allo stesso tempo, coerente con l'estetica del gioco.</p>"
+    }
   }
+}
