@@ -631,13 +631,28 @@ main:focus {
   margin-inline: auto;
 }
 
-.diagram :is(.diagram__frame, .diagram__link, .diagram__box, .diagram__active, .diagram__pod, .diagram__term) {
+.diagram :is(.diagram__frame, .diagram__link, .diagram__box, .diagram__active, .diagram__ring, .diagram__pod, .diagram__term) {
   vector-effect: non-scaling-stroke;
 }
 
 .diagram__label,
 .diagram__prompt {
   fill: var(--text-lo);
+}
+
+.diagram__plane {
+  fill: var(--text-md);
+  font-weight: 600;
+}
+
+.diagram__ring {
+  fill: none;
+  stroke: var(--signal);
+}
+
+.diagram__flavour--alt,
+.diagram__cmd--past {
+  opacity: 0;
 }
 
 .diagram__name {

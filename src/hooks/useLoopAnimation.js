@@ -6,18 +6,31 @@ export const EASE = 'cubic-bezier(0.16, 1, 0.3, 1)'
 export const loop = (element, keyframes, duration, options) =>
   element.animate(keyframes, { duration, iterations: Infinity, ...options })
 
-// Sits at `rest`, switches to `active` at `from`, holds until `to`, then returns
-// to rest. Offsets are fractions of one loop.
-export function pulse(from, to, rest, active, ramp = 0.02) {
-  return [
-    { offset: 0, ...rest },
-    { offset: from, ...rest },
-    { offset: from + ramp, ...active },
-    { offset: to, ...active },
-    { offset: Math.min(to + ramp, 1), ...rest },
-    { offset: 1, ...rest },
-  ]
+// Sits at `rest` and switches to `active` for each [from, to] window, with short
+// ramps. Offsets are fractions of one loop; windows must be in order.
+export function pulses(windows, rest, active, ramp = 0.02) {
+  const frames = [{ offset: 0, ...rest }]
+  for (const [from, to] of windows) {
+    frames.push(
+      { offset: from, ...rest },
+      { offset: Math.min(from + ramp, to), ...active },
+      { offset: to, ...active },
+      { offset: Math.min(to + ramp, 1), ...rest },
+    )
+  }
+  frames.push({ offset: 1, ...rest })
+  return frames
 }
+
+export const pulse = (from, to, rest, active, ramp) => pulses([[from, to]], rest, active, ramp)
+
+// Sweeps an element on with `steps()` easing between `from` and `to` (typing).
+export const typed = (from, to, start, end, count) => [
+  { offset: 0, transform: start },
+  { offset: from, transform: start, easing: `steps(${count}, end)` },
+  { offset: to, transform: end },
+  { offset: 1, transform: end },
+]
 
 // Sends a short dash along a path between `from` and `to`. Packets are hidden in
 // CSS, so they only exist while an animation is running.

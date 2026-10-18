@@ -53,16 +53,16 @@
       "hint": "In Storm Reply",
       "body": "Ogni giorno lavoro con Kubernetes, su <b>EKS</b> e <b>GKE</b>.",
       "diagram": {
-        "title": "Diagramma: un rolling update con Helm su un cluster Kubernetes",
-        "desc": "Il traffico passa da un ingress a un service e arriva ai pod su tre nodi. Un helm upgrade sostituisce i pod un nodo alla volta, fino al completamento del rollout."
+        "title": "Diagramma: control plane, data plane e infra plane di un cluster Kubernetes, gestiti con Terraform e Helm",
+        "desc": "terraform apply crea il control plane (etcd, api-server, scheduler, controller), i due nodegroup del data plane su EKS o node pool su GKE, e gli add-on del provider. Poi helm upgrade installa i chart Helm. Il control plane distribuisce i pod sui nodi finché il cluster è pronto. Il diagramma alterna EKS e GKE."
       }
     },
     "cloud": {
       "title": "Cloud e DevOps",
-      "body": "Mi occupo di pipeline CI/CD su <b>Azure DevOps</b> e di infrastruttura come codice con <b>Terraform</b>, su AWS, Azure e GCP.",
+      "body": "Mi occupo di pipeline CI/CD su <b>Azure DevOps</b> e di infrastruttura come codice con <b>Terraform</b>, promuovendo i rilasci tra ambienti su AWS e GCP.",
       "diagram": {
-        "title": "Diagramma: una pipeline Azure DevOps che rilascia su tre cloud",
-        "desc": "Un git push avvia in sequenza le fasi build, test, terraform plan e terraform apply, poi il rilascio arriva su AWS, Azure e GCP."
+        "title": "Diagramma: una pipeline Azure DevOps che promuove un rilascio da dev a prod su EKS e GKE",
+        "desc": "Un git push esegue terraform init, plan e apply e poi helm upgrade per l'ambiente dev, e il rilascio arriva su AWS (EKS) e GCP (GKE). Poi viene promosso, e le stesse fasi girano per prod."
       }
     }
   },
