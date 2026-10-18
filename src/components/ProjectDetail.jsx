@@ -5,6 +5,7 @@ import Gallery from './Gallery'
 import { projectOrder, projects } from '../data/projects'
 import { projectGalleries } from '../data/projectMedia'
 import { projectHref } from '../hooks/useHashRoute'
+import { getRestoreTop } from '../hooks/scrollRestore'
 
 const richText = { p: <p />, b: <b />, i: <i /> }
 
@@ -36,7 +37,7 @@ function ProjectDetail({ slug }) {
   const project = projects[slug]
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
+    window.scrollTo({ top: getRestoreTop() ?? 0, behavior: 'instant' })
     titleRef.current?.focus({ preventScroll: true })
   }, [slug])
 

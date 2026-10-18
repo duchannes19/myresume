@@ -365,10 +365,12 @@ main:focus {
   fill: var(--reply-blue);
 }
 
+/* The outline only exists while drawing; at rest the mark is its bare silhouette. */
 .reply-logo__body {
   stroke: var(--reply-blue);
-  stroke-width: 1.5px;
+  stroke-width: 50px; /* user units: about 0.6px at the rendered size */
   stroke-linejoin: round;
+  stroke-opacity: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -376,7 +378,7 @@ main:focus {
     stroke-dasharray: 1;
     animation:
       reply-draw 800ms var(--ease-out) both,
-      reply-fill 400ms var(--ease-out) 500ms both;
+      reply-fill 450ms var(--ease-out) 650ms both;
   }
 
   .reply-logo__head {
@@ -392,8 +394,8 @@ main:focus {
 }
 
 @keyframes reply-fill {
-  from { fill-opacity: 0; }
-  to { fill-opacity: 1; }
+  from { fill-opacity: 0; stroke-opacity: 1; }
+  to { fill-opacity: 1; stroke-opacity: 0; }
 }
 
 @keyframes reply-head-drop {

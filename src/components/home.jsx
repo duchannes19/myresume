@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, useLayoutEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import Header from './Header'
 import ParticlesContainer from './particles'
@@ -12,6 +12,7 @@ import Contact from './sections/Contact'
 import { ProjectDetail } from '../routes'
 import { projects } from '../data/projects'
 import { useHashRoute } from '../hooks/useHashRoute'
+import { getRestoreTop } from '../hooks/scrollRestore'
 
 function useDocumentMeta(route) {
   const { t, i18n } = useTranslation()
@@ -23,11 +24,19 @@ function useDocumentMeta(route) {
   }, [route.view, route.slug, t, i18n.resolvedLanguage])
 }
 
+// After a refresh, put the reader back where they were before the first paint.
+function useScrollRestore(route) {
+  useLayoutEffect(() => {
+    const top = getRestoreTop()
+    if (route.view === 'home' && top != null) window.scrollTo({ top, behavior: 'instant' })
+  }, [route.view])
+}
+
 // Returning from a project view to an in-page anchor: the target only exists
 // after the one-page view renders, so scroll once it has.
 function useAnchorScroll(route) {
   useEffect(() => {
-    if (route.view !== 'home' || !route.anchor) return undefined
+    if (route.view !== 'home' || !route.anchor || getRestoreTop() != null) return undefined
     const frame = requestAnimationFrame(() => {
       document.getElementById(route.anchor)?.scrollIntoView({ block: 'start' })
     })
@@ -40,6 +49,7 @@ function Homepage() {
   const route = useHashRoute()
 
   useDocumentMeta(route)
+  useScrollRestore(route)
   useAnchorScroll(route)
 
   return (
