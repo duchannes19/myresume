@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Andrea Massignan · Computer Scientist",
-    "description": "Andrea Massignan, Computer Scientist and Consultant at Strom Reply. Machine learning and full-stack projects, CV and contacts."
+    "description": "Andrea Massignan, Computer Scientist and Consultant at Storm Reply. Machine learning and full-stack projects, CV and contacts."
   },
   "skip": "Skip to content",
   "nav": {
@@ -15,7 +15,7 @@
     "language": "Language"
   },
   "hero": {
-    "role": "Computer Scientist · Consultant at <b>Strom Reply</b>",
+    "role": "Computer Scientist · Consultant at <b>Storm Reply</b>",
     "intro": "I work across machine learning and full-stack development, building intelligent systems and the software around them.",
     "cv": "Download CV",
     "email": "Email me",
@@ -30,7 +30,7 @@
     "languages": "Italian (native) · English (fluent)",
     "consultant": {
       "role": "Consultant",
-      "org": "Strom Reply"
+      "org": "Storm Reply"
     },
     "msc": {
       "role": "M.Sc. in Computer Science",
