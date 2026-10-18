@@ -375,14 +375,14 @@ main:focus {
   .reply-logo__body {
     stroke-dasharray: 1;
     animation:
-      reply-draw 1100ms var(--ease-out) 300ms both,
-      reply-fill 500ms var(--ease-out) 1100ms both;
+      reply-draw 800ms var(--ease-out) both,
+      reply-fill 400ms var(--ease-out) 500ms both;
   }
 
   .reply-logo__head {
     transform-box: fill-box;
     transform-origin: 50% 100%;
-    animation: reply-head-drop 650ms var(--ease-out) 1400ms both;
+    animation: reply-head-drop 550ms var(--ease-out) 750ms both;
   }
 }
 
